@@ -13,7 +13,8 @@ def main(argv):
 
 	inputs = Inputs()
 	inputs.parse_lines(lines)
-	print(inputs.rules_list)
+	inputs.build_trees()
+	print(inputs.trees)
 
 	return None
 

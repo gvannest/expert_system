@@ -1,7 +1,5 @@
 from settings import *
 
-class Token:
-
 
 class Element:
     """ Class representing an element of our Knowledge Base (such as A, B, C...)"""
@@ -14,7 +12,10 @@ class Element:
         self.status = FALSE
 
     def __str__(self):
-        return f"{self.value} : {self.activation}"
+        return f"{self.value}"
+
+    def __repr__(self):
+        return self.__str__()
 
 
 
@@ -22,7 +23,7 @@ class Element:
 class Operator:
     """Class respresenting a comparison operator in our rules (AND, OR, XOR...). """
 
-    def __init__(self, value, left, right):
+    def __init__(self, value):
         """Object attributes:
                 * value [str] : the 'value' of our operator : +, |, ^, !
                 * left [Element or Operator] : the left expression of our operator (can be an element or an operator linking two other expressions)
@@ -30,8 +31,9 @@ class Operator:
                 * status : the status of the expression True, False or Undetermined
         """
         self.value = value
-        self.left = left
-        self.right = right
+        self.precedence = dic_precedences[self.value]
+        # self.left = left
+        # self.right = right
         self.status = FALSE
 
 
@@ -109,6 +111,9 @@ class Operator:
 
     def __str__(self):
         return f"{self.value}"
+
+    def __repr__(self):
+        return self.__str__()
 
 
 
