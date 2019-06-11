@@ -120,3 +120,5 @@ class LogicOperator:
 
     def __init__(self, value: int):
         self.value = value #IMPLIES , IIF
+
+    # Ici il faudrait faire des regles un peu comme au dessus avec les implications
