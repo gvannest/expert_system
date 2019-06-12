@@ -1,5 +1,12 @@
 from settings import *
 
+class Tree:
+
+    def __init__(self, tree, id):
+        self.tree = tree
+        self.id = id
+
+
 
 class Element:
     """ Class representing an element of our Knowledge Base (such as A, B, C...)"""
@@ -7,6 +14,7 @@ class Element:
     def __init__(self, value):
         self.value = value
         self.rules = []
+        self.proven_rules = []
         self.status = FALSE
 
 
@@ -33,6 +41,7 @@ class Operator:
         self.precedence = dic_precedences[self.value]
         # self.left = left
         # self.right = right
+        self.proved = 0
         self.status = FALSE
 
 

@@ -1,5 +1,7 @@
 import sys
 
+from collections import deque
+
 from parsing import Inputs
 
 def main(argv):
@@ -14,7 +16,7 @@ def main(argv):
 	inputs = Inputs()
 	inputs.parse_lines(lines)
 	inputs.build_trees()
-	print(inputs.trees)
+	print(inputs.queries_list)
 
 	for e, v in inputs.elements.items():
 		print("key : {}".format(e))

@@ -50,20 +50,20 @@ class Inputs:
 				if ord(t) in range(ord('A'), ord('A') + 26):
 					if t not in self.elements.keys():
 						self.elements[t] = Element(t)
-					output_queue.appendleft(self.elements[t])
+					output_queue.append(self.elements[t])
 					set_elements.add(self.elements[t])
 				else:
 					operator = Operator(t)
 					if t != '(' and t != ')':
 						while (operator_stack and operator_stack[-1].precedence >= operator.precedence
 						and operator_stack[-1].value != '('):
-							output_queue.appendleft(operator_stack.pop())
+							output_queue.append(operator_stack.pop())
 						operator_stack.append(operator)
 					elif t == '(':
 						operator_stack.append(operator)
 					elif t == ')':
 						while operator_stack and operator_stack[-1].value != '(':
-							output_queue.appendleft(operator_stack.pop())
+							output_queue.append(operator_stack.pop())
 						if not operator_stack:
 							print("Error : Parentheses mismatch.")
 							sys.exit(0)
@@ -73,7 +73,7 @@ class Inputs:
 				if operator_stack[-1] == '(' or operator_stack[-1] == ')':
 					print("Error : Parentheses mismatch.")
 					sys.exit(0)
-				output_queue.appendleft(operator_stack.pop())
+				output_queue.append(operator_stack.pop())
 
 			self.trees.append(output_queue)
 			for e in set_elements:

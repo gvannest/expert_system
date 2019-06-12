@@ -1,4 +1,17 @@
-C | D => E
-!(A + B) + C => D
-B ^ E => D
-A + (C | D) => E + F
+#!(A + B) + C => D
+#B ^ E => D
+#A + (C | D) => E + F
+
+
+B => !A
+A | B => C
+C => D
+
+B
+?CD
+
+#inputs.elements['B'].status = True
+#inputs.elements['B'].proved = 1
+
+
+#for e in queries_list:
