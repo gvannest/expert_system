@@ -29,7 +29,8 @@ class Element:
                         e.solver(visited_tree)
                     elif isinstance(e, Operator):
                         e.right = solving_stack.pop()
-                        e.left = solving_stack.pop()
+                        if e.value != '!':
+                            e.left = solving_stack.pop()
                         e.eval_expr()
                         solving_stack.append(e)
 
@@ -78,7 +79,7 @@ class Operator:
             return self.left.status ^ self.right.status
 
         def ft_not():
-            return self.left.status ^ 1
+            return self.right.status ^ 1
 
         def ft_imply():
             self.right.status = self.left.status
