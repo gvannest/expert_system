@@ -3,7 +3,7 @@
 #A + (C | D) => E + F
 
 
-A | B => C
+A | !B => C
 D => A
 C => D
 
