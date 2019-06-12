@@ -4,6 +4,7 @@ from collections import deque
 
 from parsing import Inputs
 
+
 def main(argv):
 
 	try:
@@ -21,6 +22,7 @@ def main(argv):
 	for e, v in inputs.elements.items():
 		print("key : {}".format(e))
 		print("value.rules : {}\n".format(v.rules))
+
 
 	return None
 

@@ -3,11 +3,10 @@
 #A + (C | D) => E + F
 
 
-B => !A
 A | B => C
 C => D
 
-B
+=B
 ?CD
 
 #inputs.elements['B'].status = True
