@@ -3,12 +3,12 @@
 #A + (C | D) => E + F
 
 
-B => !A
 A | B => C
+D => A
 C => D
 
-B
-?CD
+=B
+?CDA
 
 #inputs.elements['B'].status = True
 #inputs.elements['B'].proved = 1

@@ -1,12 +1,12 @@
+from collections import deque
+
 from settings import *
 
 class Tree:
 
-    def __init__(self, tree, id):
+    def __init__(self, tree):
+        self.tree_str = tree_str
         self.tree = tree
-        self.id = id
-
-
 
 class Element:
     """ Class representing an element of our Knowledge Base (such as A, B, C...)"""
@@ -15,7 +15,23 @@ class Element:
         self.value = value
         self.rules = []
         self.proven_rules = []
+        self.proved = 0
         self.status = FALSE
+
+    def solver(self, visited_tree):
+        for tree in self.rules:
+            if tree not in visited_tree:
+                visited_tree.append(tree)
+                solving_stack = deque()
+                for e in tree:
+                    if isinstance(e, Element):
+                        solving_stack.append(e)
+                        e.solver(visited_tree)
+                    elif isinstance(e, Operator):
+                        e.right = solving_stack.pop()
+                        e.left = solving_stack.pop()
+                        e.eval_expr()
+                        solving_stack.append(e)
 
 
     def __str__(self):
@@ -39,9 +55,8 @@ class Operator:
         """
         self.value = value
         self.precedence = dic_precedences[self.value]
-        # self.left = left
-        # self.right = right
-        self.proved = 0
+        self.left = None
+        self.right = None
         self.status = FALSE
 
 
@@ -65,14 +80,22 @@ class Operator:
         def ft_not():
             return self.left.status ^ 1
 
+        def ft_imply():
+            self.right.status = self.left.status
+            self.left.proven = 1
+            return self.left.status
+
         dic_operations = {
             '+' : ft_and,
             '|' : ft_or,
             '^' : ft_xor,
             '!' : ft_not,
+            '>' : ft_imply,
         }
 
-        return dic_operations[self.value]()
+        self.status = dic_operations[self.value]()
+
+        return None
 
 
     def eval_components(self):

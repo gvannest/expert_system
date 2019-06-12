@@ -81,6 +81,15 @@ class Inputs:
 
 		return None
 
+	def set_initial_facts(self):
+		for f in self.facts_list[0]:
+			self.elements[f].status = TRUE
+			self.elements[f].proved = 1
+
+	def solve_queries(self):
+		for q in self.queries_list[0]:
+			visited_tree = []
+			self.elements[q].solver(visited_tree)
 
 
 
