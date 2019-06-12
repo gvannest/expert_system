@@ -17,10 +17,20 @@ def main(argv):
 	inputs = Inputs()
 	inputs.parse_lines(lines)
 	inputs.build_trees()
+	inputs.set_initial_facts()
 	print(inputs.queries_list)
 
+	print("====== before ======")
 	for e, v in inputs.elements.items():
 		print("key : {}".format(e))
+		print("value.status : {}\n".format(v.status))
+		print("value.rules : {}\n".format(v.rules))
+
+	inputs.solve_queries()
+	print("====== After ======")
+	for e, v in inputs.elements.items():
+		print("key : {}".format(e))
+		print("value.status : {}\n".format(v.status))
 		print("value.rules : {}\n".format(v.rules))
 
 
@@ -28,4 +38,4 @@ def main(argv):
 
 
 if __name__ == "__main__":
-    main(sys.argv)
+	main(sys.argv)
