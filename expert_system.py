@@ -16,6 +16,10 @@ def main(argv):
 	inputs.build_trees()
 	print(inputs.trees)
 
+	for e, v in inputs.elements.items():
+		print("key : {}".format(e))
+		print("value.rules : {}\n".format(v.rules))
+
 	return None
 
 

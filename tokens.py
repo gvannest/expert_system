@@ -6,10 +6,9 @@ class Element:
 
     def __init__(self, value):
         self.value = value
-        self.is_dependent = [] #plusieurs parents possibles
-        self.implies = [] #plusieurs children possibles
-        #self.activation = []  # a voir si on met une lsite ou un autre type. Ce serait la liste des conditions pour qu'il soit true
+        self.rules = []
         self.status = FALSE
+
 
     def __str__(self):
         return f"{self.value}"
