@@ -40,7 +40,7 @@ class Element:
             self.proved = 1
 
     def __str__(self):
-        return f"{self.value}"
+        return f"value : {self.value} - status : {self.status} - proved : {self.proved}"
 
     def __repr__(self):
         return self.__str__()
@@ -63,6 +63,7 @@ class Operator:
         self.left = None
         self.right = None
         self.status = FALSE
+        self.proved = 1
 
 
     def eval_expr(self):
@@ -74,28 +75,37 @@ class Operator:
              TRUE or FALSE
         """
         def ft_and():
+            if isinstance(self.right, Element) and self.right.proved == 0 and \
+                    isinstance(self.left, Element) and self.left.proved == 0:
+                self.proved = 0
             return self.left.status & self.right.status
 
         def ft_or():
+            if isinstance(self.right, Element) and self.right.proved == 0 and \
+                    isinstance(self.left, Element) and self.left.proved == 0:
+                self.proved = 0
             return self.left.status | self.right.status
 
         def ft_xor():
+            if isinstance(self.right, Element) and self.right.proved == 0 and \
+                    isinstance(self.left, Element) and self.left.proved == 0:
+                self.proved = 0
             return self.left.status ^ self.right.status
 
         def ft_not():
+            if isinstance(self.right, Element) and self.right.proved == 0:
+                self.proved = 0
             return self.right.status ^ 1
 
         def ft_imply():
-            if self.left.status == TRUE:
-                print(f"self.left de imply {self.left.value} {self.left.left.value} {self.left.right.value}")
-                print(f"self.right {self.right.value}")
+            if self.left.status == TRUE and self.left.proved:
                 self.right.change_status(TRUE)
                 if isinstance(self.right, Operator):
                     self.right.eval_components()
             return self.left.status
 
         def ft_iif():
-            if not ft_imply() and self.right.status == TRUE:
+            if not ft_imply() and self.right.status == TRUE and self.right.proved:
                 self.left.change_status(TRUE)
                 if isinstance(self.left, Operator):
                     self.left.eval_components()
@@ -109,6 +119,7 @@ class Operator:
             '>' : ft_imply,
             '<': ft_iif,
         }
+        print("AAAAAAAAAA")
 
         self.change_status(dic_operations[self.value]())
 
@@ -160,6 +171,8 @@ class Operator:
 
     def change_status(self, new_status):
         self.status = new_status
+        if self.proved:
+            self.eval_components()
 
     def __str__(self):
         return f"{self.value}"

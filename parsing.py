@@ -93,6 +93,11 @@ class Inputs:
 			visited_tree = []
 			if not self.elements[q].proved:
 				self.elements[q].solver(visited_tree)
+		for v in self.elements.values():
+			if v.proved:
+				visited_tree = []
+				v.solver(visited_tree)
+
 
 
 

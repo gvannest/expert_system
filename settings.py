@@ -1,5 +1,6 @@
 TRUE = 1
 FALSE = 0
+UNDETERMINED = -1
 
 IMPLIES = 1
 IIF = 2
