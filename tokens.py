@@ -4,12 +4,6 @@ from collections import deque
 
 from settings import *
 
-class Tree:
-
-    def __init__(self, tree):
-        self.tree_str = tree_str
-        self.tree = tree
-
 class Element:
     """ Class representing an element of our Knowledge Base (such as A, B, C...)"""
 
@@ -25,11 +19,9 @@ class Element:
             if tree not in visited_tree:
                 visited_tree.append(tree)
                 solving_stack = deque()
-                print(tree)
                 for e in tree:
                     if isinstance(e, Element):
                         solving_stack.append(e)
-                        print(f"{e.value} : {e.status} : {e.proved}")
                         e.solver(visited_tree)
                     elif isinstance(e, Operator):
                         e.right = solving_stack.pop()
@@ -95,6 +87,8 @@ class Operator:
 
         def ft_imply():
             if self.left.status == TRUE:
+                print(f"self.left de imply {self.left.value} {self.left.left.value} {self.left.right.value}")
+                print(f"self.right {self.right.value}")
                 self.right.change_status(TRUE)
                 if isinstance(self.right, Operator):
                     self.right.eval_components()
@@ -116,7 +110,7 @@ class Operator:
             '<': ft_iif,
         }
 
-        self.status = dic_operations[self.value]()
+        self.change_status(dic_operations[self.value]())
 
         return None
 
@@ -166,7 +160,6 @@ class Operator:
 
     def change_status(self, new_status):
         self.status = new_status
-        self.eval_components()
 
     def __str__(self):
         return f"{self.value}"
