@@ -100,11 +100,10 @@ class Operator:
             return self.left.status
 
         def ft_iif():
-            ft_imply()
-            if self.left.status == TRUE:
-                self.right.change_status(TRUE)
-                if isinstance(self.right, Operator):
-                    self.right.eval_components()
+            if not ft_imply() and self.right.status == TRUE:
+                self.left.change_status(TRUE)
+                if isinstance(self.left, Operator):
+                    self.left.eval_components()
             return self.left.status == self.right.status
 
         dic_operations = {

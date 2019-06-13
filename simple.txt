@@ -7,8 +7,6 @@ A + (C | G) + D => E + F
 =AB
 ?C
 
-<<<<<<< HEAD
-
 #A | D + B => C
 #D => A
 #C => D
