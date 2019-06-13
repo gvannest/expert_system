@@ -25,9 +25,11 @@ class Element:
             if tree not in visited_tree:
                 visited_tree.append(tree)
                 solving_stack = deque()
+                print(tree)
                 for e in tree:
                     if isinstance(e, Element):
                         solving_stack.append(e)
+                        print(f"{e.value} : {e.status} : {e.proved}")
                         e.solver(visited_tree)
                     elif isinstance(e, Operator):
                         e.right = solving_stack.pop()
@@ -68,7 +70,6 @@ class Operator:
         self.precedence = dic_precedences[self.value]
         self.left = None
         self.right = None
-        self.proved_oper = 0
         self.status = FALSE
 
 
@@ -165,6 +166,7 @@ class Operator:
 
     def change_status(self, new_status):
         self.status = new_status
+        self.eval_components()
 
     def __str__(self):
         return f"{self.value}"
