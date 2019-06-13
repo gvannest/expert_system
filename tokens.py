@@ -68,6 +68,7 @@ class Operator:
         self.precedence = dic_precedences[self.value]
         self.left = None
         self.right = None
+        self.proved_oper = 0
         self.status = FALSE
 
 
@@ -98,12 +99,21 @@ class Operator:
                     self.right.eval_components()
             return self.left.status
 
+        def ft_iif():
+            ft_imply()
+            if self.left.status == TRUE:
+                self.right.change_status(TRUE)
+                if isinstance(self.right, Operator):
+                    self.right.eval_components()
+            return self.left.status == self.right.status
+
         dic_operations = {
             '+' : ft_and,
             '|' : ft_or,
             '^' : ft_xor,
             '!' : ft_not,
             '>' : ft_imply,
+            '<': ft_iif,
         }
 
         self.status = dic_operations[self.value]()

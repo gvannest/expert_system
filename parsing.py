@@ -47,7 +47,7 @@ class Inputs:
 			operator_stack = deque()
 			set_elements = set()
 			for t in rule:
-				if t in [' ', '=']:
+				if t in [' ', '='] or (t == '>' and '<' in rule):
 					continue
 				if ord(t) in range(ord('A'), ord('A') + 26):
 					if t not in self.elements.keys():

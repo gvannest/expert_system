@@ -4,6 +4,7 @@ from collections import deque
 
 from parsing import Inputs
 
+
 def main(argv):
 
 	try:
@@ -42,6 +43,7 @@ def main(argv):
 			print(f"{c} is False")
 		else:
 			print(f"{c} is Undetermined")
+
 
 	return None
 
