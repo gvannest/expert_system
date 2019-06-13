@@ -22,15 +22,26 @@ def main(argv):
 	print("====== before ======")
 	for e, v in inputs.elements.items():
 		print("key : {}".format(e))
-		print("value.status : {}\n".format(v.status))
-		print("value.rules : {}\n".format(v.rules))
+		print("- status : {}".format(v.status))
+		print("- rules : {}".format(v.rules))
+		print("- proved : {}\n".format(v.proved))
 
 	inputs.solve_queries()
 	print("====== After ======")
 	for e, v in inputs.elements.items():
 		print("key : {}".format(e))
-		print("value.status : {}\n".format(v.status))
-		print("value.rules : {}\n".format(v.rules))
+		print("- status : {}".format(v.status))
+		print("- rules : {}".format(v.rules))
+		print("- proved : {}\n".format(v.proved))
+
+	for c in inputs.queries_list:
+		c_elem = inputs.elements[c]
+		if c_elem.proved and c_elem.status:
+			print(f"{c} is True")
+		elif c_elem.proved and not c_elem.status:
+			print(f"{c} is False")
+		else:
+			print(f"{c} is Undetermined")
 
 	return None
 

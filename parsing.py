@@ -34,6 +34,8 @@ class Inputs:
 					self.queries_list.append(line.split('#')[0].strip()[1:])
 				else:
 					self.rules_list.append(line.split('#')[0].strip())
+		self.facts_list = [c for c in self.facts_list[0]]
+		self.queries_list = [c for c in self.queries_list[0]]
 
 		return None
 
@@ -82,14 +84,15 @@ class Inputs:
 		return None
 
 	def set_initial_facts(self):
-		for f in self.facts_list[0]:
+		for f in self.facts_list:
 			self.elements[f].status = TRUE
 			self.elements[f].proved = 1
 
 	def solve_queries(self):
-		for q in self.queries_list[0]:
+		for q in self.queries_list:
 			visited_tree = []
-			self.elements[q].solver(visited_tree)
+			if not self.elements[q].proved:
+				self.elements[q].solver(visited_tree)
 
 
 

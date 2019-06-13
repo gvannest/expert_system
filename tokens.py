@@ -1,3 +1,5 @@
+import sys
+
 from collections import deque
 
 from settings import *
@@ -34,6 +36,14 @@ class Element:
                         e.eval_expr()
                         solving_stack.append(e)
 
+    def change_status(self, new_status):
+        if self.proved:
+            if self.status != new_status:
+                print(f"Incoherence sur l'element {self.value}")
+                sys.exit(0)
+        else:
+            self.status = new_status
+            self.proved = 1
 
     def __str__(self):
         return f"{self.value}"
@@ -82,8 +92,10 @@ class Operator:
             return self.right.status ^ 1
 
         def ft_imply():
-            self.right.status = self.left.status
-            self.left.proven = 1
+            if self.left.status == TRUE:
+                self.right.change_status(TRUE)
+                if isinstance(self.right, Operator):
+                    self.right.eval_components()
             return self.left.status
 
         dic_operations = {
@@ -109,37 +121,41 @@ class Operator:
         """
         def ft_true():
             if self.value == '+':
-                self.right.status = TRUE
-                self.left.status = TRUE
+                self.right.change_status(TRUE)
+                self.left.change_status(TRUE)
+                if isinstance(self.right, Operator):
+                    self.right.eval_expr()
+                if isinstance(self.left, Operator):
+                    self.left.eval_expr()
             elif self.value == '!':
-                self.left.status = FALSE
-            else:
-                self.right.status = UNDETERMINED
-                self.left.status = UNDETERMINED
+                self.right.change_status(FALSE)
+                if isinstance(self.right, Operator):
+                    self.right.eval_expr()
 
         def ft_false():
             if self.value == '|':
-                self.right.status = FALSE
-                self.left.status = FALSE
+                self.right.change_status(FALSE)
+                self.left.change_status(FALSE)
+                if isinstance(self.right, Operator):
+                    self.right.eval_expr()
+                if isinstance(self.left, Operator):
+                    self.left.eval_expr()
             elif self.value == '!':
-                self.left.status = TRUE
-            else:
-                self.right.status = UNDETERMINED
-                self.left.status = UNDETERMINED
-
-        def ft_undeter():
-            return None
+                self.right.change_status(TRUE)
+                if isinstance(self.right, Operator):
+                    self.right.eval_expr()
 
         dic_operations = {
             TRUE : ft_true,
             FALSE : ft_false,
-            UNDETERMINED : ft_undeter,
         }
 
         dic_operations[self.status]()
 
         return None
 
+    def change_status(self, new_status):
+        self.status = new_status
 
     def __str__(self):
         return f"{self.value}"

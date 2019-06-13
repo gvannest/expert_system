@@ -1,17 +1,16 @@
-#!(A + B) + C => D
-#B ^ E => D
-#A + (C | D) => E + F
+!(A + B) + C => D
+B ^ !E => G
+A + B => C
+A + B => !C
+A + (C | G) + D => E + F
+
+=AB
+?C
 
 
-A | !B => C
-D => A
-C => D
+#A | D + B => C
+#D => A
+#C => D
 
-=B
-?CDA
-
-#inputs.elements['B'].status = True
-#inputs.elements['B'].proved = 1
-
-
-#for e in queries_list:
+#=BA
+#?CA
