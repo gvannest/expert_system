@@ -37,12 +37,10 @@ def main(argv):
 
 	for c in inputs.queries_list:
 		c_elem = inputs.elements[c]
-		if c_elem.proved and c_elem.status:
+		if c_elem.status:
 			print(f"{c} is True")
-		elif c_elem.proved and not c_elem.status:
+		elif not c_elem.status:
 			print(f"{c} is False")
-		else:
-			print(f"{c} is Undetermined")
 
 
 	return None

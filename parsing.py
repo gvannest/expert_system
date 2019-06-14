@@ -3,7 +3,7 @@ import sys
 from collections import deque
 
 from settings import *
-from tokens import Element, Operator, LogicOperator
+from tokens import Element, Operator
 
 class Inputs:
 	"""Class containing our inputs : it parses the lines from the text file and group them into three lists:
@@ -86,17 +86,16 @@ class Inputs:
 	def set_initial_facts(self):
 		for f in self.facts_list:
 			self.elements[f].status = TRUE
-			self.elements[f].proved = 1
 
 	def solve_queries(self):
+		Element.facts_list = self.facts_list
 		for q in self.queries_list:
 			visited_tree = []
-			if not self.elements[q].proved:
-				self.elements[q].solver(visited_tree)
-		for v in self.elements.values():
-			if v.proved:
-				visited_tree = []
-				v.solver(visited_tree)
+			self.elements[q].solver(visited_tree)
+		# for v in self.elements.values():
+		# 	if v.proved:
+		# 		visited_tree = []
+		# 		v.solver(visited_tree)
 
 
 

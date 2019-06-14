@@ -1,0 +1,2 @@
+Rule syntax error in rule 'B=>'
+at symbol position 1: '=>'

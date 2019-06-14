@@ -7,12 +7,15 @@ from settings import *
 class Element:
     """ Class representing an element of our Knowledge Base (such as A, B, C...)"""
 
+    facts_list = []
+
     def __init__(self, value):
         self.value = value
         self.rules = []
         self.proven_rules = []
         self.proved = 0
         self.status = FALSE
+        self.undetermined = 0
 
     def solver(self, visited_tree):
         for tree in self.rules:
@@ -31,13 +34,15 @@ class Element:
                         solving_stack.append(e)
 
     def change_status(self, new_status):
-        if self.proved:
+        if self.value in Element.facts_list:
             if self.status != new_status:
                 print(f"Incoherence sur l'element {self.value}")
                 sys.exit(0)
         else:
             self.status = new_status
-            self.proved = 1
+            self.undetermined = 0
+            Element.facts_list.append(self.value)
+
 
     def __str__(self):
         return f"value : {self.value} - status : {self.status} - proved : {self.proved}"
@@ -63,7 +68,7 @@ class Operator:
         self.left = None
         self.right = None
         self.status = FALSE
-        self.proved = 1
+        # self.proved = 1
 
 
     def eval_expr(self):
@@ -75,37 +80,37 @@ class Operator:
              TRUE or FALSE
         """
         def ft_and():
-            if self.right.proved == 0 or self.left.proved == 0:
-                self.proved = 0
-            else:
-                self.proved = 1
+            # if self.right.proved == 0 or self.left.proved == 0:
+            #     self.proved = 0
+            # else:
+            #     self.proved = 1
             return self.left.status & self.right.status
 
         def ft_or():
-            if self.right.proved == 0 and self.left.proved == 0:
-                self.proved = 0
-            else:
-                self.proved = 1
+            # if self.right.proved == 0 and self.left.proved == 0:
+            #     self.proved = 0
+            # else:
+            #     self.proved = 1
             return self.left.status | self.right.status
 
         def ft_xor():
-            if self.right.proved == 0 and self.left.proved == 0:
-                self.proved = 0
-            else:
-                self.proved = 1
+            # if self.right.proved == 0 and self.left.proved == 0:
+            #     self.proved = 0
+            # else:
+            #     self.proved = 1
             return self.left.status ^ self.right.status
 
         def ft_not():
-            if self.right.proved == 0:
-                self.proved = 0
-            else:
-                self.proved = 1
+            # if self.right.proved == 0:
+            #     self.proved = 0
+            # else:
+            #     self.proved = 1
             return self.right.status ^ 1
 
         def ft_imply():
-            if self.left.status == TRUE and self.left.proved:
-                if isinstance(self.right, Operator):
-                    self.right.proved = 1
+            if self.left.status == TRUE:
+                # if isinstance(self.right, Operator):
+                #     self.right.proved = 1
                 self.right.change_status(TRUE)
                 if isinstance(self.right, Operator):
                     self.right.eval_components()
@@ -153,6 +158,17 @@ class Operator:
                 self.right.change_status(FALSE)
                 if isinstance(self.right, Operator):
                     self.right.eval_components()
+            elif self.value == '|':
+                if self.left.status == FALSE:
+                    if self.left.value in Element.facts_list:
+                        self.right.change_status(TRUE)
+                    else:
+                        self.left.undetermined = 1
+                if self.right.status == FALSE:
+                    if self.right.value in Element.facts_list:
+                        self.left.change_status(TRUE)
+                    else:
+                        self.right.undetermined = 1
 
         def ft_false():
             if self.value == '|':
@@ -178,24 +194,10 @@ class Operator:
 
     def change_status(self, new_status):
         self.status = new_status
-        if self.proved:
-            self.eval_components()
+        # self.eval_components()
 
     def __str__(self):
         return f"{self.value}"
 
     def __repr__(self):
         return self.__str__()
-
-
-
-
-class LogicOperator:
-    """
-    Class representing a logical operator. For the time being there are two of them : IMPLIES and IIF (If and only if).
-    """
-
-    def __init__(self, value: int):
-        self.value = value #IMPLIES , IIF
-
-    # Ici il faudrait faire des regles un peu comme au dessus avec les implications

@@ -1,0 +1,2 @@
+Some queries are not allowed in '?BcA':
+{'c'}
