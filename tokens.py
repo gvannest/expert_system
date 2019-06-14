@@ -75,30 +75,37 @@ class Operator:
              TRUE or FALSE
         """
         def ft_and():
-            if isinstance(self.right, Element) and self.right.proved == 0 and \
-                    isinstance(self.left, Element) and self.left.proved == 0:
+            if self.right.proved == 0 or self.left.proved == 0:
                 self.proved = 0
+            else:
+                self.proved = 1
             return self.left.status & self.right.status
 
         def ft_or():
-            if isinstance(self.right, Element) and self.right.proved == 0 and \
-                    isinstance(self.left, Element) and self.left.proved == 0:
+            if self.right.proved == 0 and self.left.proved == 0:
                 self.proved = 0
+            else:
+                self.proved = 1
             return self.left.status | self.right.status
 
         def ft_xor():
-            if isinstance(self.right, Element) and self.right.proved == 0 and \
-                    isinstance(self.left, Element) and self.left.proved == 0:
+            if self.right.proved == 0 and self.left.proved == 0:
                 self.proved = 0
+            else:
+                self.proved = 1
             return self.left.status ^ self.right.status
 
         def ft_not():
-            if isinstance(self.right, Element) and self.right.proved == 0:
+            if self.right.proved == 0:
                 self.proved = 0
+            else:
+                self.proved = 1
             return self.right.status ^ 1
 
         def ft_imply():
             if self.left.status == TRUE and self.left.proved:
+                if isinstance(self.right, Operator):
+                    self.right.proved = 1
                 self.right.change_status(TRUE)
                 if isinstance(self.right, Operator):
                     self.right.eval_components()
@@ -106,6 +113,8 @@ class Operator:
 
         def ft_iif():
             if not ft_imply() and self.right.status == TRUE and self.right.proved:
+                if isinstance(self.left, Operator):
+                    self.left.proved = 1
                 self.left.change_status(TRUE)
                 if isinstance(self.left, Operator):
                     self.left.eval_components()
@@ -119,8 +128,6 @@ class Operator:
             '>' : ft_imply,
             '<': ft_iif,
         }
-        print("AAAAAAAAAA")
-
         self.change_status(dic_operations[self.value]())
 
         return None
@@ -139,26 +146,26 @@ class Operator:
                 self.right.change_status(TRUE)
                 self.left.change_status(TRUE)
                 if isinstance(self.right, Operator):
-                    self.right.eval_expr()
+                    self.right.eval_components()
                 if isinstance(self.left, Operator):
-                    self.left.eval_expr()
+                    self.left.eval_components()
             elif self.value == '!':
                 self.right.change_status(FALSE)
                 if isinstance(self.right, Operator):
-                    self.right.eval_expr()
+                    self.right.eval_components()
 
         def ft_false():
             if self.value == '|':
                 self.right.change_status(FALSE)
                 self.left.change_status(FALSE)
                 if isinstance(self.right, Operator):
-                    self.right.eval_expr()
+                    self.right.eval_components()
                 if isinstance(self.left, Operator):
-                    self.left.eval_expr()
+                    self.left.eval_components()
             elif self.value == '!':
                 self.right.change_status(TRUE)
                 if isinstance(self.right, Operator):
-                    self.right.eval_expr()
+                    self.right.eval_components()
 
         dic_operations = {
             TRUE : ft_true,

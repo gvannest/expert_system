@@ -1,11 +1,10 @@
 !(A + B) + C => D
-B ^ !E => G
+B ^ E => G
 A + B => C
-A + B => !C
 A + (C | G) + D => E + F
 
-=AB
-?C
+=ABD
+?CEFG
 
 #A | D + B => C
 #D => A
