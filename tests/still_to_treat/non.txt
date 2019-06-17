@@ -7,6 +7,6 @@ A + B => !C
 P => L
 P => !A
 
-=BA   ##
+=BA
 
-?ALPB  #p
+?ALPB

@@ -6,4 +6,4 @@ E => F
 
 =A
 
-?ABCF
+?ABCDEF

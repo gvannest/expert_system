@@ -100,7 +100,7 @@ class Operator:
             return self.left.status
 
         def ft_iif():
-            if not ft_imply() and self.right.status == TRUE and self.right.proved:
+            if not ft_imply() and self.right.status == TRUE:
                 if isinstance(self.right, Element):
                     Element.facts_list.append(self.right.value)
                 elif isinstance(self.right, Operator):
@@ -143,16 +143,14 @@ class Operator:
             elif self.value == '!':
                 self.right.change_status(FALSE, 1)
             elif self.value == '|':
-                if self.left.status == FALSE and not self.right.status == TRUE:
-                    if self.left.value in Element.facts_list:
-                        self.right.change_status(TRUE, 1)
-                    else:
-                        ft_undetermined(self.left)
-                if self.right.status == FALSE and not self.left.status == TRUE:
-                    if self.right.value in Element.facts_list:
-                        self.left.change_status(TRUE, 1)
-                    else:
-                        ft_undetermined(self.right)
+                if self.left.status == FALSE and self.left.value in Element.facts_list:
+                    self.right.change_status(TRUE, 1)
+                else:
+                    ft_undetermined(self.left)
+                if self.right.status == FALSE and self.right.value in Element.facts_list:
+                    self.left.change_status(TRUE, 1)
+                else:
+                    ft_undetermined(self.right)
             elif self.value == '^':
                 if self.left.value in Element.facts_list:
                     if self.left.value == FALSE:

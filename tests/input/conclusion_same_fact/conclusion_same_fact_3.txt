@@ -1,6 +1,6 @@
-A => C + D
+!A => C + D
 B => D + E
-C + E => !A
+C + E => A
 
 
 =B
