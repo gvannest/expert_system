@@ -26,7 +26,7 @@ def main(argv):
 	# 	print("- status : {}".format(v.status))
 	# 	print("- rules : {}".format(v.rules))
 	# 	print("- proved : {}\n".format(v.proved))
-	print(f"{inputs.elements['A']}")
+	# print(f"{inputs.elements['A']}")
 	inputs.solve_queries()
 	# print("====== After ======")
 	# for e, v in inputs.elements.items():
@@ -37,7 +37,9 @@ def main(argv):
 
 	for c in inputs.queries_list:
 		c_elem = inputs.elements[c]
-		if c_elem.status:
+		if c_elem.value not in inputs.facts_list and c_elem.undetermined:
+			print(f"{c} is Undetermined")
+		elif c_elem.status:
 			print(f"{c} is True")
 		elif not c_elem.status:
 			print(f"{c} is False")

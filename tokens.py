@@ -33,7 +33,7 @@ class Element:
                         e.eval_expr()
                         solving_stack.append(e)
 
-    def change_status(self, new_status):
+    def change_status(self, new_status, imply=0):
         if self.value in Element.facts_list:
             if self.status != new_status:
                 print(f"Incoherence sur l'element {self.value}")
@@ -68,7 +68,6 @@ class Operator:
         self.left = None
         self.right = None
         self.status = FALSE
-        # self.proved = 1
 
 
     def eval_expr(self):
@@ -80,49 +79,33 @@ class Operator:
              TRUE or FALSE
         """
         def ft_and():
-            # if self.right.proved == 0 or self.left.proved == 0:
-            #     self.proved = 0
-            # else:
-            #     self.proved = 1
             return self.left.status & self.right.status
 
         def ft_or():
-            # if self.right.proved == 0 and self.left.proved == 0:
-            #     self.proved = 0
-            # else:
-            #     self.proved = 1
             return self.left.status | self.right.status
 
         def ft_xor():
-            # if self.right.proved == 0 and self.left.proved == 0:
-            #     self.proved = 0
-            # else:
-            #     self.proved = 1
             return self.left.status ^ self.right.status
 
         def ft_not():
-            # if self.right.proved == 0:
-            #     self.proved = 0
-            # else:
-            #     self.proved = 1
             return self.right.status ^ 1
 
         def ft_imply():
             if self.left.status == TRUE:
-                # if isinstance(self.right, Operator):
-                #     self.right.proved = 1
-                self.right.change_status(TRUE)
-                if isinstance(self.right, Operator):
-                    self.right.eval_components()
+                if isinstance(self.left, Element):
+                    Element.facts_list.append(self.left.value)
+                elif isinstance(self.left, Operator):
+                    self.left.add_factlist()
+                self.right.change_status(TRUE, 1)
             return self.left.status
 
         def ft_iif():
             if not ft_imply() and self.right.status == TRUE and self.right.proved:
-                if isinstance(self.left, Operator):
-                    self.left.proved = 1
-                self.left.change_status(TRUE)
-                if isinstance(self.left, Operator):
-                    self.left.eval_components()
+                if isinstance(self.right, Element):
+                    Element.facts_list.append(self.right.value)
+                elif isinstance(self.right, Operator):
+                    self.right.add_factlist()
+                self.left.change_status(TRUE, 1)
             return self.left.status == self.right.status
 
         dic_operations = {
@@ -146,42 +129,76 @@ class Operator:
         Return:
             None - it directly modifies the status of its components left and right
         """
+        def ft_undetermined(token):
+            if isinstance(token, Element):
+                token.undetermined = 1
+            elif isinstance(token, Operator):
+                ft_undetermined(token.right)
+                ft_undetermined(token.left)
+
         def ft_true():
             if self.value == '+':
-                self.right.change_status(TRUE)
-                self.left.change_status(TRUE)
-                if isinstance(self.right, Operator):
-                    self.right.eval_components()
-                if isinstance(self.left, Operator):
-                    self.left.eval_components()
+                self.right.change_status(TRUE, 1)
+                self.left.change_status(TRUE, 1)
             elif self.value == '!':
-                self.right.change_status(FALSE)
-                if isinstance(self.right, Operator):
-                    self.right.eval_components()
+                self.right.change_status(FALSE, 1)
             elif self.value == '|':
-                if self.left.status == FALSE:
+                if self.left.status == FALSE and not self.right.status == TRUE:
                     if self.left.value in Element.facts_list:
-                        self.right.change_status(TRUE)
+                        self.right.change_status(TRUE, 1)
                     else:
-                        self.left.undetermined = 1
-                if self.right.status == FALSE:
+                        ft_undetermined(self.left)
+                if self.right.status == FALSE and not self.left.status == TRUE:
                     if self.right.value in Element.facts_list:
-                        self.left.change_status(TRUE)
+                        self.left.change_status(TRUE, 1)
                     else:
-                        self.right.undetermined = 1
+                        ft_undetermined(self.right)
+            elif self.value == '^':
+                if self.left.value in Element.facts_list:
+                    if self.left.value == FALSE:
+                        self.right.change_status(TRUE, 1)
+                    else:
+                        self.right.change_status(FALSE, 1)
+                if self.right.value in Element.facts_list:
+                    if self.right.value == FALSE:
+                        self.left.change_status(TRUE, 1)
+                    else:
+                        self.left.change_status(FALSE, 1)
+                if self.left.value not in Element.facts_list and self.right.value not in Element.facts_list:
+                    ft_undetermined(self.left)
+                    ft_undetermined(self.right)
 
         def ft_false():
             if self.value == '|':
-                self.right.change_status(FALSE)
-                self.left.change_status(FALSE)
-                if isinstance(self.right, Operator):
-                    self.right.eval_components()
-                if isinstance(self.left, Operator):
-                    self.left.eval_components()
+                self.right.change_status(FALSE, 1)
+                self.left.change_status(FALSE, 1)
             elif self.value == '!':
-                self.right.change_status(TRUE)
-                if isinstance(self.right, Operator):
-                    self.right.eval_components()
+                self.right.change_status(TRUE, 1)
+            elif self.value == '+':
+                if self.left.status == TRUE:
+                    self.right.change_status(FALSE, 1)
+                elif self.right.status == TRUE:
+                    self.left.change_status(FALSE, 1)
+                else:
+                    if self.left.value not in Element.facts_list:
+                        ft_undetermined(self.left)
+                    if self.right.value not in Element.facts_list:
+                        ft_undetermined(self.right)
+            elif self.value == '^':
+                if self.left.value in Element.facts_list:
+                    if self.left.value == FALSE:
+                        self.right.change_status(FALSE, 1)
+                    else:
+                        self.right.change_status(TRUE, 1)
+                if self.right.value in Element.facts_list:
+                    if self.right.value == FALSE:
+                        self.left.change_status(FALSE, 1)
+                    else:
+                        self.left.change_status(TRUE, 1)
+                if self.left.value not in Element.facts_list and self.right.value not in Element.facts_list:
+                    ft_undetermined(self.left)
+                    ft_undetermined(self.right)
+
 
         dic_operations = {
             TRUE : ft_true,
@@ -192,9 +209,21 @@ class Operator:
 
         return None
 
-    def change_status(self, new_status):
+    def change_status(self, new_status, imply=0):
         self.status = new_status
-        # self.eval_components()
+        if imply:
+            self.eval_components()
+
+    def add_factlist(self):
+        if self.value != '|':
+            if isinstance(self.left, Element):
+                Element.facts_list.append(self.left.value)
+            elif isinstance(self.left, Operator):
+                self.left.add_factlist()
+            if isinstance(self.right, Element):
+                Element.facts_list.append(self.right.value)
+            elif isinstance(self.right, Operator):
+                self.right.add_factlist()
 
     def __str__(self):
         return f"{self.value}"
