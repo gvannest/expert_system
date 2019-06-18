@@ -1,8 +1,8 @@
-A + B => C
+#A + B => C
 
-=AC
+#=AC
 
-?ABC
+#?ABC
 
 #!A + !B => C | D
 
@@ -21,11 +21,12 @@ A + B => C
 #A | B <=> C
 #D => B
 
-#=AD
-#?CB
-
-
-#A => !((C | D) + C)
-
 #=A
+#?ACBD
 
+
+A => !((C | D) + C)
+
+=AD
+
+?ACD

@@ -1,15 +1,14 @@
-A => B + C | !D
-!D => B
-
-=A
-
-?ABCD
-
-
-#A => B | C
-
+#A => B + C | D
 
 #=A
 
+#?ABCD
 
-#?ABC
+
+A => !!B | !!C
+
+
+=A
+
+
+?ABC

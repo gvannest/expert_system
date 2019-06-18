@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="daeef03e-640f-4132-85ad-30648c95880c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expert_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/expert_system.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsing.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem.txt" beforeDir="false" afterPath="$PROJECT_DIR$/problem.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/input/and/and_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/and/and_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/input/and/and_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/and/and_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_0.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/input/not/not_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/not/not_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/input/or/or_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/or/or_0.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/input/or/or_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/or/or_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/input/or/or_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/or/or_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/input/or/or_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/or/or_5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/input/priority/priority_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/priority/priority_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/input/priority/priority_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/priority/priority_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/input/priority/priority_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/priority/priority_4.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tokens.py" beforeDir="false" afterPath="$PROJECT_DIR$/tokens.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +32,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/parsing.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1320">
-                  <caret line="93" column="48" selection-start-line="93" selection-start-column="48" selection-end-line="93" selection-end-column="48" />
+                <state relative-caret-position="1113">
+                  <caret line="94" selection-start-line="94" selection-end-line="94" />
                   <folding>
                     <element signature="e#0#10#0" expanded="true" />
                   </folding>
@@ -30,8 +44,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tokens.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="110">
-                  <caret line="141" column="15" selection-start-line="141" selection-start-column="15" selection-end-line="141" selection-end-column="15" />
+                <state relative-caret-position="183">
+                  <caret line="95" column="39" lean-forward="true" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="39" />
                   <folding>
                     <element signature="e#0#10#0" expanded="true" />
                   </folding>
@@ -47,8 +61,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/settings.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+                <state relative-caret-position="195">
+                  <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
                 </state>
               </provider>
             </entry>
@@ -56,8 +70,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/expert_system.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+                <state relative-caret-position="315">
+                  <caret line="21" selection-start-line="21" selection-end-line="21" />
                   <folding>
                     <element signature="e#0#10#0" expanded="true" />
                   </folding>
@@ -69,11 +83,20 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/problem.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="19" selection-start-column="19" selection-end-column="19" />
+                <state relative-caret-position="60">
+                  <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_5.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
                 </state>
               </provider>
             </entry>
@@ -108,41 +131,43 @@
         <option value="$PROJECT_DIR$/tests.py" />
         <option value="$PROJECT_DIR$/simple.txt" />
         <option value="$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_5.txt" />
-        <option value="$PROJECT_DIR$/tests/input/or/or_2.txt" />
         <option value="$PROJECT_DIR$/tests/input/or/or_3.txt" />
-        <option value="$PROJECT_DIR$/tests/input/or/or_5.txt" />
-        <option value="$PROJECT_DIR$/parsing.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/expert_system.py" />
-        <option value="$PROJECT_DIR$/tests/input/and/and_2.txt" />
-        <option value="$PROJECT_DIR$/tests/input/and/and_3.txt" />
-        <option value="$PROJECT_DIR$/tests/input/or/or_1.txt" />
         <option value="$PROJECT_DIR$/tests/input/not/not_0.txt" />
-        <option value="$PROJECT_DIR$/tests/input/not/not_5.txt" />
         <option value="$PROJECT_DIR$/tests/input/not/not_6.txt" />
         <option value="$PROJECT_DIR$/tests/input/not/not_7.txt" />
         <option value="$PROJECT_DIR$/tests/input/xor/xor_5.txt" />
-        <option value="$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_0.txt" />
-        <option value="$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_1.txt" />
         <option value="$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_2.txt" />
         <option value="$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_3.txt" />
-        <option value="$PROJECT_DIR$/tests/input/priority/priority_2.txt" />
         <option value="$PROJECT_DIR$/tests/input/priority/priority_3.txt" />
-        <option value="$PROJECT_DIR$/tests/input/priority/priority_4.txt" />
         <option value="$PROJECT_DIR$/tests/input/imply/imply_3.txt" />
         <option value="$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_2.txt" />
         <option value="$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_3.txt" />
         <option value="$PROJECT_DIR$/tests/still_to_treat/non.txt" />
-        <option value="$PROJECT_DIR$/tokens.py" />
+        <option value="$PROJECT_DIR$/parsing.py" />
         <option value="$PROJECT_DIR$/problem.txt" />
+        <option value="$PROJECT_DIR$/expert_system.py" />
+        <option value="$PROJECT_DIR$/tokens.py" />
+        <option value="$PROJECT_DIR$/tests/input/and/and_2.txt" />
+        <option value="$PROJECT_DIR$/tests/input/and/and_3.txt" />
+        <option value="$PROJECT_DIR$/tests/input/or/or_0.txt" />
+        <option value="$PROJECT_DIR$/tests/input/or/or_1.txt" />
+        <option value="$PROJECT_DIR$/tests/input/or/or_2.txt" />
+        <option value="$PROJECT_DIR$/tests/input/or/or_5.txt" />
+        <option value="$PROJECT_DIR$/tests/input/not/not_5.txt" />
+        <option value="$PROJECT_DIR$/tests/input/priority/priority_1.txt" />
+        <option value="$PROJECT_DIR$/tests/input/priority/priority_2.txt" />
+        <option value="$PROJECT_DIR$/tests/input/priority/priority_4.txt" />
+        <option value="$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_0.txt" />
+        <option value="$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_1.txt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="x" value="1440" />
-    <option name="y" value="-353" />
+    <option name="y" value="-330" />
     <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="height" value="979" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -156,6 +181,24 @@
             <path>
               <item name="expert_system" type="b2602c69:ProjectViewProjectNode" />
               <item name="expert_system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="expert_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="expert_system" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="expert_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="expert_system" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="expert_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="expert_system" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+              <item name="conclusion_same_fact" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -232,15 +275,15 @@
       <workItem from="1560330748803" duration="15155000" />
       <workItem from="1560404634561" duration="23499000" />
       <workItem from="1560767918240" duration="13164000" />
-      <workItem from="1560865042136" duration="4175000" />
+      <workItem from="1560865042136" duration="11645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100759000" />
+    <option name="totallyTimeSpent" value="108229000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="-353" width="1920" height="1080" extended-state="0" />
+    <frame x="1440" y="-330" width="1920" height="979" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11608094" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -256,7 +299,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2029703" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.23111612" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -271,100 +314,123 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/input/and/and_4.txt">
+    <entry file="file://$PROJECT_DIR$/tests/input/imply/imply_3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/imply/imply_0.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/output/out_and_0.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/still_to_treat/non.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parsing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1113">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expert_system.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/and/and_0.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/and/and_1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/and/and_2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/and/and_3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/and/and_4.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/and/and_5.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/or/or_0.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/or/or_1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        <state>
+          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/or/or_2.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/or/or_3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/or/or_4.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/or/or_5.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/not/not_0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/and/and_2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/not/not_3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/not/not_4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/not/not_5.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/not/not_6.txt">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/not/not_7.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/not/not_8.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/not/not_0.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/not/not_1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -375,15 +441,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/or/or_0.txt">
+    <entry file="file://$PROJECT_DIR$/tests/input/not/not_3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/not/not_4.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/not/not_5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/not/not_6.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/xor/xor_0.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/xor/xor_1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/xor/xor_0.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/xor/xor_2.txt">
       <provider selected="true" editor-type-id="text-editor" />
@@ -395,59 +477,41 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/xor/xor_5.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/xor/xor_1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/complex.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/priority/priority_0.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/priority/priority_1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/priority/priority_2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tokens.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="95" column="39" lean-forward="true" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/priority/priority_3.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -463,41 +527,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/imply/imply_1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/imply/imply_2.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/imply/imply_3.txt">
+    <entry file="file://$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_0.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        <state>
+          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/imply/imply_0.txt">
+    <entry file="file://$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_2.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/priority/priority_2.txt">
+    <entry file="file://$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="30">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_0.txt">
+    <entry file="file://$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_3.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/not/not_1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_2.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -506,23 +561,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_0.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_3.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_4.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_and_0.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/still_to_treat/non.txt">
+    <entry file="file://$PROJECT_DIR$/problem.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state relative-caret-position="60">
+          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -530,50 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parsing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="93" column="48" selection-start-line="93" selection-start-column="48" selection-end-line="93" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expert_system.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tokens.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="141" column="15" selection-start-line="141" selection-start-column="15" selection-end-line="141" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/problem.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
         </state>
       </provider>
     </entry>

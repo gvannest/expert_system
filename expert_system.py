@@ -18,23 +18,7 @@ def main(argv):
 	inputs.parse_lines(lines)
 	inputs.build_trees()
 	inputs.set_initial_facts()
-	print(inputs.queries_list)
-
-	# print("====== before ======")
-	# for e, v in inputs.elements.items():
-	# 	print("key : {}".format(e))
-	# 	print("- status : {}".format(v.status))
-	# 	print("- rules : {}".format(v.rules))
-	# 	print("- proved : {}\n".format(v.proved))
-	# print(f"{inputs.elements['A']}")
 	inputs.solve_queries()
-	# print("====== After ======")
-	# for e, v in inputs.elements.items():
-	# 	print("key : {}".format(e))
-	# 	print("- status : {}".format(v.status))
-	# 	print("- rules : {}".format(v.rules))
-	# 	print("- proved : {}\n".format(v.proved))
-
 	for c in inputs.queries_list:
 		c_elem = inputs.elements[c]
 		if c_elem.value not in inputs.facts_list and c_elem.undetermined:
