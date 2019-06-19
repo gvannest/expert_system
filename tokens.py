@@ -28,7 +28,6 @@ class Element:
                         e.solver(visited_tree)
                     elif isinstance(e, Operator):
                         e.right = solving_stack.pop()
-                        print(f"{e.value} - {e.right}")
                         if e.value != '!':
                             e.left = solving_stack.pop()
                         e.eval_expr()
