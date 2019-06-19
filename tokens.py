@@ -22,12 +22,14 @@ class Element:
             if tree not in visited_tree:
                 visited_tree.append(tree)
                 solving_stack = deque()
+                print(tree)
                 for e in tree:
                     if isinstance(e, Element):
                         solving_stack.append(e)
                         e.solver(visited_tree)
                     elif isinstance(e, Operator):
                         e.right = solving_stack.pop()
+                        print(f"{e.value} - {e.right}")
                         if e.value != '!':
                             e.left = solving_stack.pop()
                         e.eval_expr()
@@ -45,7 +47,7 @@ class Element:
 
 
     def __str__(self):
-        return f"value : {self.value} - status : {self.status} - proved : {self.proved}"
+        return f"{self.value}"
 
     def __repr__(self):
         return self.__str__()
@@ -244,23 +246,30 @@ class Operator:
         if isinstance(self.right, Operator):
             self.right.add_oper_factlist()
         if self.value == '+':
-            if self.left.status == TRUE and self.right.status == TRUE:
-                Operator.facts_list.append(self)
-            elif self.left.status == FALSE and self.left.value in Element.facts_list:
-                Operator.facts_list.append(self)
-            elif self.right.status == FALSE and self.right.value in Element.facts_list:
-                Operator.facts_list.append(self)
+            if (self.left.value in Element.facts_list or self.left in Operator.facts_list)\
+                and (self.right.value in Element.facts_list or self.right in Operator.facts_list):
+                    Operator.facts_list.append(self)
+            elif self.left.status == FALSE and (self.left.value in Element.facts_list or self.left in Operator.facts_list):
+                    Operator.facts_list.append(self)
+            elif self.right.status == FALSE and (self.right.value in Element.facts_list or self.right in Operator.facts_list):
+                    Operator.facts_list.append(self)
         elif self.value == '^':
-            if self.left.value in Element.facts_list and self.right.value in Element.facts_list:
+            if (self.left.value in Element.facts_list or self.left in Operator.facts_list)\
+                and (self.right.value in Element.facts_list or self.right in Operator.facts_list):
                 Operator.facts_list.append(self)
         elif self.value == '!':
-            if self.right.value in Element.facts_list:
+            if self.right.value in Element.facts_list or self.right in Operator.facts_list:
                 Operator.facts_list.append(self)
         elif self.value == '|':
-            if self.left.status == TRUE or self.right.status == TRUE:
+            if (self.left.value in Element.facts_list or self.left in Operator.facts_list)\
+                and (self.right.value in Element.facts_list or self.right in Operator.facts_list):
                 Operator.facts_list.append(self)
-            elif self.left.value in Element.facts_list and self.right.value in Element.facts_list:
-                Operator.facts_list.append(self)
+            elif self.left.value in Element.facts_list or self.left in Operator.facts_list:
+                if self.left.status == TRUE:
+                    Operator.facts_list.append(self)
+            elif self.right.value in Element.facts_list or self.right in Operator.facts_list:
+                if self.right.status == TRUE:
+                    Operator.facts_list.append(self)
 
 
     def __str__(self):
