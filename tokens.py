@@ -22,7 +22,6 @@ class Element:
             if tree not in visited_tree:
                 visited_tree.append(tree)
                 solving_stack = deque()
-                print(tree)
                 for e in tree:
                     if isinstance(e, Element):
                         solving_stack.append(e)
