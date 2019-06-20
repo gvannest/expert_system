@@ -18,7 +18,11 @@ def main(argv):
 	inputs.parse_lines(lines)
 	inputs.build_trees()
 	inputs.set_initial_facts()
+	inputs.check_query_list()
+	inputs.check_trees()
 	inputs.solve_queries()
+	
+
 	for c in inputs.queries_list:
 		c_elem = inputs.elements[c]
 		if c_elem.value not in inputs.facts_list and c_elem.undetermined:
