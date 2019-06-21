@@ -10,8 +10,8 @@ def main(argv):
 	try:
 		with open(argv[1], 'r') as file:
 			lines = file.readlines()
-	except IndexError as e:
-		print("Please provide a valid file as argument.")
+	except Exception as e:
+		print(f"{e} : Please provide a valid file as argument.")
 		sys.exit(0)
 
 	inputs = Inputs()
