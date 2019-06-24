@@ -5,10 +5,17 @@
 #?ABCD
 
 
-A => B | C
+#A => B
+A + D => C | E
+A | C => D
+B | C => !F
+
+=ADF
 
 
-=A
+?ABCDEFAB
 
+#A => B | C
 
-?ABC
+#=A
+#?ABC

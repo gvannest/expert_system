@@ -7,8 +7,7 @@ from tokens import Element, Operator
 
 
 class Trees:
-	"""Class containing the detailled information for each tree constructed from each rules in the inputs file
-	"""
+	"""Class containing the detailed information for each tree constructed from each rule in the input file"""
 	def __init__(self, value, str_value):
 		self.value = value
 		self.str_value = str_value
@@ -28,20 +27,28 @@ class Inputs:
 	def __init__(self):
 		self.rules_list = []
 		self.facts_list = []
-		self.queries_list = set()
+		self.queries_list = []
 		self.trees = []
 		self.elements = {}
+
+	def reinit_elements(self):
+		for e in self.elements.values():
+			e.undetermined = 0
+			e.status = FALSE
 
 	def parsing_error(self, message):
 		print(message)
 		sys.exit(0)
 
-	def parse_lines(self, lines):
+	def parse_lines(self, lines, flag_first):
 		
 		rules = 0
 		facts = 0
 		queries = 0
 		queries_list = ''
+		self.facts_list = []
+		if not flag_first:
+			self.reinit_elements()
 		for e in lines:
 			line = e.strip()
 			if line:
@@ -51,16 +58,16 @@ class Inputs:
 					facts = 1
 					if queries == 0:
 						self.facts_list.append(line.split('#')[0].strip()[1:])
-					else :
+					elif flag_first :
 						self.parsing_error("Error : Facts in the input are stated after the queries.")
 				elif line[0] == '?':
 					queries = 1
-					queries_list = (line.split('#')[0].strip()[1:])
+					queries_list = line.split('#')[0].strip()[1:]
 				else:
 					if facts == 0 and queries == 0:
 						rules = 1
 						self.rules_list.append(line.split('#')[0].strip())
-					else :
+					elif flag_first :
 						self.parsing_error("Error : Rules in the input are stated after the facts or queries.")
 		if facts == 1:
 			self.facts_list = [c if 'A' <= c <= 'Z' else self.parsing_error(f"Error : Token {c} is unauthorized in fact list.") for c in self.facts_list[0]]
@@ -68,10 +75,11 @@ class Inputs:
 			self.parsing_error("Error : Facts were not stated.")
 		if queries == 1:
 			for query in queries_list:
-				self.queries_list.add(query)
-		else:
+				if query not in self.queries_list:
+					self.queries_list.append(query)
+		elif flag_first:
 			self.parsing_error("Error : Queries were not stated.")
-		if rules == 0:
+		if rules == 0 and flag_first:
 			self.parsing_error("Error : There are no rules in input file.")
 
 		return None
@@ -171,6 +179,8 @@ class Inputs:
 
 	def solve_queries(self):
 		Element.facts_list = self.facts_list
+		for elem in self.elements.values():
+			elem.undetermined = 0
 		for q in self.queries_list:
 			visited_tree = []
 			self.elements[q].solver(visited_tree)

@@ -5,19 +5,30 @@ from collections import deque
 from settings import *
 
 class Element:
-    """ Class representing an element of our Knowledge Base (such as A, B, C...)"""
+    """ Class representing an element of our Knowledge Base (such as A, B, C...)
+
+        Attributes:
+            * facts_list : list to keep track of element which have been proven by rules.
+    """
 
     facts_list = []
 
     def __init__(self, value):
+        """ Element class constructor.
+        Attributes:
+            * value : the letter associated with the current object
+            * rules : list of rules associated with the current object
+            * status : current status of the element. Can be TRUE or FALSE
+            * undetermined : 1 if the element is undetermined, 0 otherwise
+        """
         self.value = value
         self.rules = []
         self.proven_rules = []
-        self.proved = 0
         self.status = FALSE
         self.undetermined = 0
 
     def solver(self, visited_tree):
+        """Recursive function on each element of the tree, solving the query"""
         for tree in self.rules:
             if tree not in visited_tree:
                 visited_tree.append(tree)
@@ -54,13 +65,18 @@ class Element:
 
 
 class Operator:
-    """Class respresenting a comparison operator in our rules (AND, OR, XOR...). """
+    """Class representing a comparison operator in our rules (AND, OR, XOR...).
+
+    Attributes:
+        * facts_list : list which tracks the operator objects which have been proved by the different rules.
+    """
 
     facts_list = []
 
     def __init__(self, value):
         """Object attributes:
                 * value [str] : the 'value' of our operator : +, |, ^, !
+                * precedence : priority of the current operator
                 * left [Element or Operator] : the left expression of our operator (can be an element or an operator linking two other expressions)
                 * right [Element or Operator] : the right branch of our operator
                 * status : the status of the expression True, False or Undetermined
@@ -74,11 +90,12 @@ class Operator:
 
     def eval_expr(self):
         """
-        This functions evaluates the current operator (i.e. expression) given the statuses of its components.
+        This functions evaluates the current operator (i.e. expression) given the status of its components.
         Hence here we go up the tree.
+        For the imply operator, we call the eval components to evaluate the elements on the implied side of the rule.
 
         Return:
-             TRUE or FALSE
+             None but changes the status of the current operator to True or False
         """
         def ft_and():
             return self.left.status & self.right.status
@@ -222,6 +239,7 @@ class Operator:
         return None
 
     def change_status(self, new_status, imply=0):
+        """Function called when there is a request for changing the status of the operator."""
         self.status = new_status
         self.add_oper_factlist()
         if imply:
