@@ -2,6 +2,7 @@ import sys
 import argparse
 
 from parsing import Inputs
+from tokens import Element
 from settings import *
 
 def ft_argparser():
@@ -39,6 +40,25 @@ def ft_clear_undetermined(inputs):
 				break
 	return None
 
+def verbose(elem):
+	message = ''
+	if elem.proved_by == []:
+		if elem.status:
+			message = f"{elem.value} is a fact.\n"
+		else:
+			message = f"{elem.value} is undetermined.\n"
+	else:
+		for tree in elem.proved_by:
+			message += tree.str_value
+			for token in tree.value:
+				if isinstance(token, Element) and token != elem:
+					if token.status == 1:
+						message += f" and {token.value} is TRUE"
+					else:
+						message += f" and {token.value} is FALSE"
+			message += '\n'
+	return message
+
 
 def print_output(inputs):
 	for c in inputs.queries_list:
@@ -46,9 +66,9 @@ def print_output(inputs):
 		if c_elem.value not in inputs.facts_list and c_elem.undetermined:
 			print(f"{c} is undetermined")
 		elif c_elem.status:
-			print(f"{c} is true")
+			print(f"{c} is TRUE because {verbose(c_elem)}")
 		elif not c_elem.status:
-			print(f"{c} is false")
+			print(f"{c} is FALSE because {verbose(c_elem)}")
 
 	return None
 

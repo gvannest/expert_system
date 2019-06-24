@@ -124,9 +124,10 @@ class Inputs:
 					self.parsing_error("Error : Parentheses mismatch.")
 				output_queue.append(operator_stack.pop())
 
-			self.trees.append(Trees(output_queue, rule))
+			new_tree = Trees(output_queue, rule)
+			self.trees.append(new_tree)
 			for e in set_elements:
-				e.rules.append(output_queue)
+				e.rules.append(new_tree)
 
 		return None
 
