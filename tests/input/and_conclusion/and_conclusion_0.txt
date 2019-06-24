@@ -6,16 +6,18 @@
 
 
 #A => B
-A + D => C | E
-A | C => D
-B | C => !F
+#A + D => C | E
+#A | C => D
+#B | C => !F
 
-=ADF
+#=ADF
 
 
-?ABCDEFAB
+#?ABCDEF
 
-#A => B | C
+A => B | C
+B => D
+C => E
 
-#=A
-#?ABC
+=A
+?ABCDE

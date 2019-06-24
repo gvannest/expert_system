@@ -161,14 +161,14 @@ class Operator:
                     right.change_status(TRUE, 1)
                 elif isinstance(left, Operator) and left in Operator.facts_list:
                     right.change_status(TRUE, 1)
-                elif right.status == FALSE:
+                else:
                     ft_undetermined(left)
             if right.status == FALSE:
                 if isinstance(right, Element) and right.value in Element.facts_list:
                     left.change_status(TRUE, 1)
                 elif isinstance(right, Operator) and right in Operator.facts_list:
                     left.change_status(TRUE, 1)
-                elif left.status == FALSE:
+                else:
                     ft_undetermined(right)
 
         def xor_solve(left, right, boolean):

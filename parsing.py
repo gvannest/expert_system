@@ -27,6 +27,7 @@ class Inputs:
 	def __init__(self):
 		self.rules_list = []
 		self.facts_list = []
+		self.initial_facts = []
 		self.queries_list = []
 		self.trees = []
 		self.elements = {}
@@ -176,6 +177,7 @@ class Inputs:
 	def set_initial_facts(self):
 		for f in self.facts_list:
 			self.elements[f].status = TRUE
+			self.initial_facts.append(f)
 
 	def solve_queries(self):
 		Element.facts_list = self.facts_list

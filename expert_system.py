@@ -34,6 +34,7 @@ def ft_clear_undetermined(inputs):
 				c_elem.undetermined = 0
 				inputs.facts_list.append(c_elem.value)
 				inputs.solve_queries()
+				print_output(inputs)
 				ft_clear_undetermined(inputs)
 				break
 	return None
@@ -51,23 +52,31 @@ def print_output(inputs):
 
 	return None
 
-def ft_interactive(inputs):
+def ft_interactive(inputs, args):
 	""" Function which is called only if the Interactive Facts mode is set on.
 		Asks the user whether he wants to change initial facts.
 		Requests for new_facts and relaunch the solving process.
 	"""
 	change_facts = ''
 	while change_facts.lower() != 'n':
-		change_facts = input('Would you like to change the facts? (y/n)  ')
+		change_facts = input('Would you like to change the initial facts? (y/n)  ')
 		while change_facts.lower() != 'y' and change_facts.lower() != 'n':
-			change_facts = input('Would you like to change the facts? (y/n)  ')
+			change_facts = input('Would you like to change the initial facts? (y/n)  ')
 		if change_facts.lower() == 'y':
+			for rule in inputs.rules_list:
+				print(rule)
+			print(f"Initial facts : {inputs.initial_facts}")
 			new_facts = input("Please provide a new set of facts : ")
 			new_facts = new_facts.replace(' ', '')
-			new_facts = '=' + new_facts if new_facts[0] != '=' else new_facts
+			if new_facts == '':
+				new_facts = '='
+			else:
+				new_facts = '=' + new_facts if new_facts[0] != '=' else new_facts
 			inputs.parse_lines([new_facts], 0)
 			inputs.set_initial_facts()
 			inputs.solve_queries()
+			if args.undetermined:
+				ft_clear_undetermined(inputs)
 			print_output(inputs)
 	return None
 
@@ -90,13 +99,12 @@ def main():
 	inputs.check_trees()
 	inputs.solve_queries()
 
-	if args.undetermined:
-		ft_clear_undetermined(inputs)
-
 	print_output(inputs)
 
+	if args.undetermined:
+		ft_clear_undetermined(inputs)
 	if args.interactive:
-		ft_interactive(inputs)
+		ft_interactive(inputs, args)
 
 	return None
 

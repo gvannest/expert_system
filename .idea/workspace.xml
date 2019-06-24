@@ -18,11 +18,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.45053956">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tokens.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1434">
-                  <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+                <state relative-caret-position="2445">
+                  <caret line="163" column="21" selection-start-line="163" selection-start-column="21" selection-end-line="163" selection-end-column="21" />
                   <folding>
                     <element signature="e#0#10#0" expanded="true" />
                   </folding>
@@ -39,11 +39,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/parsing.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="907">
-                  <caret line="182" column="24" selection-start-line="182" selection-start-column="24" selection-end-line="182" selection-end-column="24" />
+                <state relative-caret-position="862">
+                  <caret line="179" column="40" selection-start-line="179" selection-start-column="40" selection-end-line="179" selection-end-column="40" />
                   <folding>
                     <element signature="e#0#10#0" expanded="true" />
                   </folding>
@@ -58,8 +58,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/expert_system.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+                <state relative-caret-position="366">
+                  <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
                   <folding>
                     <element signature="e#0#10#0" expanded="true" />
                   </folding>
@@ -70,8 +70,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_0.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+                <state relative-caret-position="255">
+                  <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
@@ -89,6 +89,8 @@
       <find>self.proved</find>
       <find>self.trees</find>
       <find>proven_rules</find>
+      <find>print</find>
+      <find>initial</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -134,9 +136,9 @@
         <option value="$PROJECT_DIR$/tests/input/priority/priority_2.txt" />
         <option value="$PROJECT_DIR$/tests/input/priority/priority_4.txt" />
         <option value="$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_1.txt" />
+        <option value="$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_0.txt" />
         <option value="$PROJECT_DIR$/tokens.py" />
         <option value="$PROJECT_DIR$/parsing.py" />
-        <option value="$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_0.txt" />
         <option value="$PROJECT_DIR$/expert_system.py" />
       </list>
     </option>
@@ -151,6 +153,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,22 +161,10 @@
               <item name="expert_system" type="b2602c69:ProjectViewProjectNode" />
               <item name="expert_system" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="expert_system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="expert_system" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="expert_system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="expert_system" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -246,18 +237,19 @@
       <workItem from="1560767918240" duration="13164000" />
       <workItem from="1560865042136" duration="12555000" />
       <workItem from="1560942078319" duration="3502000" />
-      <workItem from="1561373777642" duration="2779000" />
+      <workItem from="1561373777642" duration="4858000" />
+      <workItem from="1561382229830" duration="2954000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120780000" />
+    <option name="totallyTimeSpent" value="125813000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11675933" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.117553614" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -517,37 +509,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parsing.py">
+    <entry file="file://$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_0.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="907">
-          <caret line="182" column="24" selection-start-line="182" selection-start-column="24" selection-end-line="182" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tokens.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1434">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+        <state relative-caret-position="2445">
+          <caret line="163" column="21" selection-start-line="163" selection-start-column="21" selection-end-line="163" selection-end-column="21" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_0.txt">
+    <entry file="file://$PROJECT_DIR$/parsing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="862">
+          <caret line="179" column="40" selection-start-line="179" selection-start-column="40" selection-end-line="179" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/expert_system.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        <state relative-caret-position="366">
+          <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
