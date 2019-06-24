@@ -1,0 +1,4 @@
+A is false
+B is false
+C is undetermined
+D is undetermined

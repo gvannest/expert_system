@@ -1,32 +1,9 @@
-#A + B => C
+A + B => C
 
-#=AC
+=AC
 
-#?ABC
-
-#!A + !B => C | D
-
-#=
-
-#?ABCD
+?ABC
 
 
-#!C => B
-#B => C
-
-#=
-
-#?BC
-
-#A | B <=> C
-#D => B
-
-#=A
-#?ACBD
 
 
-A => !((C | D) + C)
-
-=AD
-
-?ACD

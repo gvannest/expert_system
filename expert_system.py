@@ -81,11 +81,9 @@ def ft_interactive(inputs, args):
 	return None
 
 
-def main():
-
-	args = ft_argparser()
+def	standard_algo(filename):
 	try:
-		with args.filename as file:
+		with open(filename, 'r') as file:
 			lines = file.readlines()
 	except Exception as e:
 		print(f"{e} : Please provide a valid file as argument.")
@@ -101,6 +99,12 @@ def main():
 
 	print_output(inputs)
 
+	return None
+
+def main(args):
+
+	standard_algo(args.filename)
+
 	if args.undetermined:
 		ft_clear_undetermined(inputs)
 	if args.interactive:
@@ -110,4 +114,5 @@ def main():
 
 
 if __name__ == "__main__":
-	main()
+	args = ft_argparser()
+	main(args)
