@@ -23,7 +23,7 @@ class Element:
         """
         self.value = value
         self.rules = []
-        self.proven_rules = []
+        self.proved_by = []
         self.status = FALSE
         self.undetermined = 0
 
@@ -33,7 +33,7 @@ class Element:
             if tree not in visited_tree:
                 visited_tree.append(tree)
                 solving_stack = deque()
-                for e in tree:
+                for e in tree.value:
                     if isinstance(e, Element):
                         solving_stack.append(e)
                         e.solver(visited_tree)
@@ -41,10 +41,10 @@ class Element:
                         e.right = solving_stack.pop()
                         if e.value != '!':
                             e.left = solving_stack.pop()
-                        e.eval_expr()
+                        e.eval_expr(tree)
                         solving_stack.append(e)
 
-    def change_status(self, new_status, imply=0):
+    def change_status(self, new_status, tree, imply=0):
         if self.value in Element.facts_list:
             if self.status != new_status:
                 print(f"Incoherence sur l'element {self.value}")
@@ -52,6 +52,7 @@ class Element:
         else:
             self.status = new_status
             self.undetermined = 0
+            self.proved_by.append(tree)
             Element.facts_list.append(self.value)
 
 
@@ -88,7 +89,7 @@ class Operator:
         self.status = FALSE
 
 
-    def eval_expr(self):
+    def eval_expr(self, tree):
         """
         This functions evaluates the current operator (i.e. expression) given the status of its components.
         Hence here we go up the tree.
@@ -97,34 +98,34 @@ class Operator:
         Return:
              None but changes the status of the current operator to True or False
         """
-        def ft_and():
+        def ft_and(tree):
             return self.left.status & self.right.status
 
-        def ft_or():
+        def ft_or(tree):
             return self.left.status | self.right.status
 
-        def ft_xor():
+        def ft_xor(tree):
             return self.left.status ^ self.right.status
 
-        def ft_not():
+        def ft_not(tree):
             return self.right.status ^ 1
 
-        def ft_imply():
+        def ft_imply(tree):
             if self.left.status == TRUE:
                 if isinstance(self.left, Element):
                     Element.facts_list.append(self.left.value)
                 elif isinstance(self.left, Operator):
-                    self.left.add_elem_factlist()
-                self.right.change_status(TRUE, 1)
+                    self.left.add_elem_factlist(tree)
+                self.right.change_status(TRUE, tree, 1)
             return self.left.status
 
-        def ft_iif():
-            if not ft_imply() and self.right.status == TRUE:
+        def ft_iif(tree):
+            if not ft_imply(tree) and self.right.status == TRUE:
                 if isinstance(self.right, Element):
                     Element.facts_list.append(self.right.value)
                 elif isinstance(self.right, Operator):
-                    self.right.add_elem_factlist()
-                self.left.change_status(TRUE, 1)
+                    self.right.add_elem_factlist(tree)
+                self.left.change_status(TRUE, tree, 1)
             return self.left.status == self.right.status
 
         dic_operations = {
@@ -135,12 +136,12 @@ class Operator:
             '>' : ft_imply,
             '<': ft_iif,
         }
-        self.change_status(dic_operations[self.value]())
+        self.change_status(dic_operations[self.value](tree), tree)
 
         return None
 
 
-    def eval_components(self):
+    def eval_components(self, tree):
         """
         This function evaluates the components inside the expression given the status of the operator (expression).
         Here we go down the tree.
@@ -155,33 +156,33 @@ class Operator:
                 ft_undetermined(token.right)
                 ft_undetermined(token.left)
 
-        def or_is_true(left, right):
+        def or_is_true(left, right, tree):
             if left.status == FALSE:
                 if isinstance(left, Element) and left.value in Element.facts_list:
-                    right.change_status(TRUE, 1)
+                    right.change_status(TRUE, tree, 1)
                 elif isinstance(left, Operator) and left in Operator.facts_list:
-                    right.change_status(TRUE, 1)
+                    right.change_status(TRUE, tree, 1)
                 else:
                     ft_undetermined(left)
             if right.status == FALSE:
                 if isinstance(right, Element) and right.value in Element.facts_list:
-                    left.change_status(TRUE, 1)
+                    left.change_status(TRUE, tree, 1)
                 elif isinstance(right, Operator) and right in Operator.facts_list:
-                    left.change_status(TRUE, 1)
+                    left.change_status(TRUE, tree, 1)
                 else:
                     ft_undetermined(right)
 
-        def xor_solve(left, right, boolean):
+        def xor_solve(left, right, boolean, tree):
             if left.value in Element.facts_list or left in Operator.facts_list:
                 if left.status == FALSE:
-                    right.change_status(TRUE ^ boolean, 1)
+                    right.change_status(TRUE ^ boolean, tree, 1)
                 else:
-                    right.change_status(FALSE ^ boolean, 1)
+                    right.change_status(FALSE ^ boolean, tree, 1)
             if right.value in Element.facts_list or right in Operator.facts_list:
                 if right.status == FALSE:
-                    left.change_status(TRUE ^ boolean, 1)
+                    left.change_status(TRUE ^ boolean, tree, 1)
                 else:
-                    left.change_status(FALSE ^ boolean, 1)
+                    left.change_status(FALSE ^ boolean, tree, 1)
             if (isinstance(left, Element) and left.value not in Element.facts_list) \
                 or isinstance(left, Operator) and left not in Operator.facts_list:
                 if isinstance(right, Element) and right.value not in Element.facts_list:
@@ -191,70 +192,74 @@ class Operator:
                     ft_undetermined(left)
                     ft_undetermined(right)
 
-        def and_is_false(left, right):
+        def and_is_false(left, right, tree):
             if left.status == TRUE:
                 if isinstance(left, Element) and left.value in Element.facts_list:
-                    right.change_status(FALSE, 1)
+                    right.change_status(FALSE, tree, 1)
                 elif isinstance(left, Operator) and left in Operator.facts_list:
-                    right.change_status(FALSE, 1)
+                    right.change_status(FALSE, tree, 1)
                 else:
                     ft_undetermined(left)
             if right.status == TRUE:
                 if isinstance(right, Element) and right.value in Element.facts_list:
-                    left.change_status(FALSE, 1)
+                    left.change_status(FALSE, tree, 1)
                 elif isinstance(right, Operator) and right in Operator.facts_list:
-                    left.change_status(FALSE, 1)
+                    left.change_status(FALSE, tree, 1)
                 else:
                     ft_undetermined(right)
 
-        def ft_true():
+        def ft_true(tree):
             if self.value == '+':
-                self.right.change_status(TRUE, 1)
-                self.left.change_status(TRUE, 1)
+                self.right.change_status(TRUE, tree, 1)
+                self.left.change_status(TRUE, tree, 1)
             elif self.value == '!':
-                self.right.change_status(FALSE, 1)
+                self.right.change_status(FALSE, tree, 1)
             elif self.value == '|':
-                or_is_true(self.left, self.right)
+                or_is_true(self.left, self.right, tree)
             elif self.value == '^':
-                xor_solve(self.left, self.right, 0)
+                xor_solve(self.left, self.right, 0, tree)
 
-        def ft_false():
+        def ft_false(tree):
             if self.value == '|':
-                self.right.change_status(FALSE, 1)
-                self.left.change_status(FALSE, 1)
+                self.right.change_status(FALSE, tree, 1)
+                self.left.change_status(FALSE, tree, 1)
             elif self.value == '!':
-                self.right.change_status(TRUE, 1)
+                self.right.change_status(TRUE, tree, 1)
             elif self.value == '+':
-                and_is_false(self.left, self.right)
+                and_is_false(self.left, self.right, tree)
             elif self.value == '^':
-                xor_solve(self.left, self.right, 1)
+                xor_solve(self.left, self.right, 1, tree)
 
         dic_operations = {
             TRUE : ft_true,
             FALSE : ft_false,
         }
 
-        dic_operations[self.status]()
+        dic_operations[self.status](tree)
 
         return None
 
-    def change_status(self, new_status, imply=0):
+    def change_status(self, new_status, tree, imply=0):
         """Function called when there is a request for changing the status of the operator."""
         self.status = new_status
         self.add_oper_factlist()
         if imply:
-            self.eval_components()
+            self.eval_components(tree)
 
-    def add_elem_factlist(self):
+    def add_elem_factlist(self, tree):
         if self.value != '|':
             if isinstance(self.left, Element):
                 Element.facts_list.append(self.left.value)
+                if self.left.status != 1 and tree not in self.left.proved_by:
+                    self.left.proved_by.append(tree)
             elif isinstance(self.left, Operator):
-                self.left.add_elem_factlist()
+                self.left.add_elem_factlist(tree)
             if isinstance(self.right, Element):
                 Element.facts_list.append(self.right.value)
+                if self.right.status != 1 and tree not in self.right.proved_by:
+                    self.right.proved_by.append(tree)
             elif isinstance(self.right, Operator):
-                self.right.add_elem_factlist()
+                self.right.add_elem_factlist(tree)
 
     def add_oper_factlist(self):
         if isinstance(self.left, Operator):
