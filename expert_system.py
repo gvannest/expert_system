@@ -80,17 +80,19 @@ def verbose(elem):
 
 
 def print_output(inputs):
-    for c in inputs.queries_list:
-        c_elem = inputs.elements[c]
-        if c_elem.value not in inputs.facts_list and c_elem.undetermined:
-            print(f"{c} is undetermined")
-        elif c_elem.status:
-            print(f"{c} is TRUE because:\n\t{verbose(c_elem)}")
-        elif not c_elem.status:
-            print(f"{c} is FALSE because:\n\t{verbose(c_elem)}")
-        print('\n')
-
-    return None
+	if inputs.queries_list:
+		last = inputs.queries_list[-1]
+	for c in inputs.queries_list:
+		c_elem = inputs.elements[c]
+		if c_elem.value not in inputs.facts_list and c_elem.undetermined:
+			print(f"{c} is undetermined")
+		elif c_elem.status:
+			print(f"{c} is TRUE because:\n\t{verbose(c_elem)}")
+		elif not c_elem.status:
+			print(f"{c} is FALSE because:\n\t{verbose(c_elem)}")
+		if c != last:
+			print('')
+	return None
 
 
 def ft_interactive(inputs, args):
