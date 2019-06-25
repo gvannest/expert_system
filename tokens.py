@@ -53,7 +53,8 @@ class Element:
             self.status = new_status
             self.undetermined = 0
             self.proved_by.append(tree)
-            Element.facts_list.append(self.value)
+            if self.value not in Element.facts_list:
+                Element.facts_list.append(self.value)
 
 
     def __str__(self):
@@ -61,8 +62,6 @@ class Element:
 
     def __repr__(self):
         return self.__str__()
-
-
 
 
 class Operator:
@@ -113,7 +112,8 @@ class Operator:
         def ft_imply(tree):
             if self.left.status == TRUE:
                 if isinstance(self.left, Element):
-                    Element.facts_list.append(self.left.value)
+                    if self.left.value not in Element.facts_list:
+                        Element.facts_list.append(self.left.value)
                 elif isinstance(self.left, Operator):
                     self.left.add_elem_factlist(tree)
                 self.right.change_status(TRUE, tree, 1)
@@ -122,7 +122,8 @@ class Operator:
         def ft_iif(tree):
             if not ft_imply(tree) and self.right.status == TRUE:
                 if isinstance(self.right, Element):
-                    Element.facts_list.append(self.right.value)
+                    if self.right.value not in Element.facts_list:
+                        Element.facts_list.append(self.right.value)
                 elif isinstance(self.right, Operator):
                     self.right.add_elem_factlist(tree)
                 self.left.change_status(TRUE, tree, 1)
@@ -170,6 +171,14 @@ class Operator:
                 elif isinstance(right, Operator) and right in Operator.facts_list:
                     left.change_status(TRUE, tree, 1)
                 else:
+                    ft_undetermined(right)
+            if left.status == TRUE:
+                if (isinstance(left, Element) and left.value not in Element.facts_list)\
+                    or (isinstance(left, Operator) and left not in Operator.facts_list):
+                    ft_undetermined(left)
+            if right.status == TRUE:
+                if (isinstance(right, Element) and right.value not in Element.facts_list)\
+                    or (isinstance(right, Operator) and right not in Operator.facts_list):
                     ft_undetermined(right)
 
         def xor_solve(left, right, boolean, tree):
@@ -249,13 +258,15 @@ class Operator:
     def add_elem_factlist(self, tree):
         if self.value != '|':
             if isinstance(self.left, Element):
-                Element.facts_list.append(self.left.value)
+                if self.left.value not in Element.facts_list:
+                    Element.facts_list.append(self.left.value)
                 if self.left.status != 1 and tree not in self.left.proved_by:
                     self.left.proved_by.append(tree)
             elif isinstance(self.left, Operator):
                 self.left.add_elem_factlist(tree)
             if isinstance(self.right, Element):
-                Element.facts_list.append(self.right.value)
+                if self.right.value not in Element.facts_list:
+                    Element.facts_list.append(self.right.value)
                 if self.right.status != 1 and tree not in self.right.proved_by:
                     self.right.proved_by.append(tree)
             elif isinstance(self.right, Operator):
