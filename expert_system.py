@@ -10,10 +10,11 @@ def ft_argparser():
 	parser.add_argument("filename", type=argparse.FileType('r'), help="Text file with the rule set, facts and queries to be solved")
 	parser.add_argument("-i", "--interactive", action="store_true", help="Interactive facts mode, where the user can change facts or add new facts")
 	parser.add_argument("-u", "--undetermined", action="store_true", help="Undetermined mode, where the user can clarify undetermined facts")
+	parser.add_argument("-v", "--verbose", action="store_true", help="Verbose mode. Outputs the rules leading to a particular conclusion")
 	args = parser.parse_args()
 	return args
 
-def ft_clear_undetermined(inputs):
+def ft_clear_undetermined(inputs, v):
 	"""Function used only if teh Undetermined option is set on.
 		Asks the user to clarify an undetermined fact if there exists one.
 		Relaunch the solver once an undetermined facts has been clarify
@@ -35,8 +36,8 @@ def ft_clear_undetermined(inputs):
 				c_elem.undetermined = 0
 				inputs.facts_list.append(c_elem.value)
 				inputs.solve_queries()
-				print_output(inputs)
-				ft_clear_undetermined(inputs)
+				print_output(inputs, v)
+				ft_clear_undetermined(inputs, v)
 				break
 	return None
 
@@ -60,19 +61,25 @@ def verbose(elem):
 	return message
 
 
-def print_output(inputs):
+def print_output(inputs, v):
 	for c in inputs.queries_list:
 		c_elem = inputs.elements[c]
 		if c_elem.value not in inputs.facts_list and c_elem.undetermined:
 			print(f"{c} is undetermined")
-		elif c_elem.status:
-			print(f"{c} is TRUE because {verbose(c_elem)}")
-		elif not c_elem.status:
-			print(f"{c} is FALSE because {verbose(c_elem)}")
+		elif v:
+			if c_elem.status:
+				print(f"{c} is TRUE because {verbose(c_elem)}")
+			elif not c_elem.status:
+				print(f"{c} is FALSE because {verbose(c_elem)}")
+		else:
+			if c_elem.status:
+				print(f"{c} is true")
+			elif not c_elem.status:
+				print(f"{c} is false")
 
 	return None
 
-def ft_interactive(inputs, args):
+def ft_interactive(inputs, v):
 	""" Function which is called only if the Interactive Facts mode is set on.
 		Asks the user whether he wants to change initial facts.
 		Requests for new_facts and relaunch the solving process.
@@ -96,12 +103,12 @@ def ft_interactive(inputs, args):
 			inputs.set_initial_facts()
 			inputs.solve_queries()
 			if args.undetermined:
-				ft_clear_undetermined(inputs)
-			print_output(inputs)
+				ft_clear_undetermined(inputs, v)
+			print_output(inputs, v)
 	return None
 
 
-def	standard_algo(filename):
+def	standard_algo(filename, v):
 	try:
 		with open(filename, 'r') as file:
 			lines = file.readlines()
@@ -117,18 +124,18 @@ def	standard_algo(filename):
 	inputs.check_trees()
 	inputs.solve_queries()
 
-	print_output(inputs)
+	print_output(inputs, v)
 
 	return None
 
 def main(args):
 
-	standard_algo(args.filename)
+	standard_algo(args.filename, args.verbose)
 
 	if args.undetermined:
-		ft_clear_undetermined(inputs)
+		ft_clear_undetermined(inputs, args.verbose)
 	if args.interactive:
-		ft_interactive(inputs, args)
+		ft_interactive(inputs, args.verbose)
 
 	return None
 

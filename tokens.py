@@ -47,7 +47,7 @@ class Element:
     def change_status(self, new_status, tree, imply=0):
         if self.value in Element.facts_list:
             if self.status != new_status:
-                print(f"Incoherence sur l'element {self.value}")
+                print(f"Incoherence on element {self.value}")
                 sys.exit(0)
         else:
             self.status = new_status

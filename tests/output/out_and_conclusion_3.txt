@@ -1,4 +1,4 @@
-A is true.
-B is true.
-C is false.
-D is true.
+A is true
+B is true
+C is false
+D is true

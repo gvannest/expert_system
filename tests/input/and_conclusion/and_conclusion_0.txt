@@ -1,23 +1,6 @@
-#A => B + C | D
-
-#=A
-
-#?ABCD
-
-
-#A => B
-#A + D => C | E
-#A | C => D
-#B | C => !F
-
-#=ADF
-
-
-#?ABCDEF
-
-A => B | C
-B => D
-C => E
+A => B + C
 
 =A
-?ABCDE
+
+?ABC
+
