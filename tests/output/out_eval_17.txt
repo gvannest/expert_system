@@ -1,1 +1,1 @@
-A is true.
+A is true

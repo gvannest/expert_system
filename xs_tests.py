@@ -147,3 +147,16 @@ class TestExpertSystem:
 				with capsys.disabled():
 					print(file)
 				assert  results.out == out_target
+
+	def test_eval(self, capsys):
+		path = "tests/input/eval"
+		list_files = os.listdir(path)
+		for file in list_files:
+			if file.endswith('.txt'):
+				with open(f"tests/output/out_{file}", 'r') as fd:
+					out_target = fd.read()
+				standard_algo(f"{path}/{file}", False)
+				results = capsys.readouterr()
+				with capsys.disabled():
+					print(file)
+				assert  results.out == out_target
