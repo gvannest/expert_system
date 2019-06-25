@@ -1,11 +1,11 @@
-!(A + B) + C => D
-B ^ E => G
-A + B => C
-A + (C | G) + D => F
-B => G
+#!(A + B) + C => D
+#B ^ E => G
+#A + B => C
+#A + (C | G) + D => F
+#B => G
 
-=ABD
-?ABCDEFG
+#=ABD
+#?ABCDEFG
 
 #A | D + B => C
 #D => A
@@ -13,3 +13,17 @@ B => G
 
 #=BA
 #?CA
+
+#A => B | !C
+#B => D
+#C => E
+
+#=A
+#?ABCDE
+
+A => B
+B =>
+
+=AB
+
+?AB
