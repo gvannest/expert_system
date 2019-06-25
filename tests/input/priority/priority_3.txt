@@ -1,4 +1,4 @@
-A + !B | !C ^ E | F + G => !(H + C)
+A + (!B) | (!C) ^ E | F + G => !(H + C)
 
 =ABCEFG
 

@@ -1,2 +1,1 @@
-Rule syntax error in rule '=>C'
-at symbol position 0: '=>'
+Error : Token > is unauthorized in fact list.
