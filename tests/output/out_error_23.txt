@@ -1,3 +1,1 @@
-File syntax error:
-File should contain first rules with '=>' or '<=>', then facts starting with '=' and finally queries starting with '?'.
-Nothing else but comments is accepted.)
+Error : Unauthorized token in A + 3B => C.

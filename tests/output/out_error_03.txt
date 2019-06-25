@@ -1,1 +1,3 @@
-Some queries appear twice in '?BCAB'
+B is true
+C is true
+A is true

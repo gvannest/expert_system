@@ -82,20 +82,22 @@ def print_output(inputs, v):
 	last = inputs.queries_list[-1]
 	for c in inputs.queries_list:
 		c_elem = inputs.elements[c]
-		if c_elem.value not in inputs.facts_list and c_elem.undetermined:
-			print(f"{c} is UNDETERMINED")
-		elif v:
-			if c_elem.status:
+		if v:
+			if c_elem.value not in inputs.facts_list and c_elem.undetermined:
+				print(f"{c} is UNDETERMINED")
+			elif c_elem.status:
 				print(f"{c} is TRUE because:\n\t{verbose(c_elem)}")
 			elif not c_elem.status:
 				print(f"{c} is FALSE because:\n\t{verbose(c_elem)}")
 		else:
-			if c_elem.status:
+			if c_elem.value not in inputs.facts_list and c_elem.undetermined:
+				print(f"{c} is undetermined")
+			elif c_elem.status:
 				print(f"{c} is true")
 			elif not c_elem.status:
 				print(f"{c} is false")
-		if c != last:
-			print('')
+		# if c != last:
+		# 	print('')
 
 def ft_interactive(inputs, v):
 	""" Function which is called only if the Interactive Facts mode is set on.

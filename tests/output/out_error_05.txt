@@ -1,2 +1,1 @@
-Rule syntax error in rule 'A+)B+C(=>D'
-at symbol position 1: '+'
+Error : Parentheses mismatch.

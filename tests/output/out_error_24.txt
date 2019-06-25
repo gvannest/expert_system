@@ -1,2 +1,1 @@
-Some facts are not allowed in '=A?':
-{'?'}
+Error : Token ? is unauthorized in fact list.

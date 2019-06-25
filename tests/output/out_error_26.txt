@@ -1,2 +1,1 @@
-Some queries are not allowed in '?BcA':
-{'c'}
+Error : Element c in query list does not exist.

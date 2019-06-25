@@ -1,1 +1,1 @@
-Some queries appear twice in '?BCABCBACBD'
+Error : Element D in query list does not exist.

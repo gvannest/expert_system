@@ -14,10 +14,16 @@
 #=BA
 #?CA
 
-A => B | !C
-B => D
-C => E
-A => B
+#A => B | !C
+#B => D
+#C => E
+#A => B
 
-=A
-?ABCDE
+#=A
+#?ABCDE
+
+((((A + B))) => C
+
+=AB
+
+?BCA

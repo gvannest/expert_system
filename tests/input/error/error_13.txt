@@ -1,4 +1,4 @@
 A => B | C #if you decide to accept or in conclusion should be undefined
 =A
 
-?B
+?BCA

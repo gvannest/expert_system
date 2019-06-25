@@ -161,7 +161,7 @@ class Inputs:
                         f"Error : Token {t} is not authorized in {rule}.")
 
             while operator_stack:
-                if operator_stack[-1] == '(' or operator_stack[-1] == ')':
+                if operator_stack[-1].value == '(' or operator_stack[-1].value == ')':
                     self.parsing_error("Error : Parentheses mismatch.")
                 output_queue.append(operator_stack.pop())
 

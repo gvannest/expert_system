@@ -1,2 +1,1 @@
-Rule syntax error: unauthorized character: {'/'}
-in rule: '/=>C'
+Error : Unauthorized token in / => C.

@@ -1,3 +1,1 @@
-B is true.
-C is true.
-A is false.
+Error : Too many imply tokens in (A => B) => C.
