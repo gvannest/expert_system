@@ -186,18 +186,17 @@ class TestExpertSystem:
 		path = "tests/input/parsing_error"
 		list_files = os.listdir(path)
 		for file in list_files:
-			if file.endswith('.txt'):
-				with open(f"tests/output/out_{file}", 'r') as fd:
-					out_target = fd.read()
-				with capsys.disabled():
-					print(f"{file} getting in")
-				if file not in ['error_03.txt', 'error_07.txt', 'error_11.txt',
-								'error_21.txt']:
-					with pytest.raises(SystemExit) as e:
-						standard_algo(f"{path}/{file}", False)
-				else:
+			with open(f"tests/output/out_{file}", 'r') as fd:
+				out_target = fd.read()
+			with capsys.disabled():
+				print(f"{file} getting in")
+			if file not in ['error_03.txt', 'error_07.txt', 'error_11.txt',
+							'error_21.txt']:
+				with pytest.raises(SystemExit) as e:
 					standard_algo(f"{path}/{file}", False)
-				results = capsys.readouterr()
-				with capsys.disabled():
-					print(f"{file} getting out")
-				assert  results.out == out_target
+			else:
+				standard_algo(f"{path}/{file}", False)
+			results = capsys.readouterr()
+			with capsys.disabled():
+				print(f"{file} getting out")
+			assert  results.out == out_target

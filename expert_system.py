@@ -129,6 +129,10 @@ def ft_interactive(inputs, v):
 
 
 def standard_algo(filename, v):
+
+	if not filename.endswith('.txt'):
+		print("Error : please provide a valid file, in .txt format.")
+		sys.exit(0)
 	try:
 		with open(filename, 'r') as file:
 			lines = file.readlines()

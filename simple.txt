@@ -22,8 +22,14 @@
 #=A
 #?ABCDE
 
-((((A + B))) => C
+#((((A + B))) => C
 
-=AB
+#=AB
 
-?BCA
+#?BCA
+
+A + c => D
+
+=A
+
+?cD

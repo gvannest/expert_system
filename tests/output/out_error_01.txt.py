@@ -1,1 +1,1 @@
-File input error: please provide a .txt file.
+Error : please provide a valid file, in .txt format.
