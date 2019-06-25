@@ -1,2 +1,1 @@
-Rule syntax error in rule 'A=>=>B'
-at symbol position 1: '=>'
+Error : Too many imply tokens in A =>=> B.

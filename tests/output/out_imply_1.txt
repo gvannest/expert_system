@@ -1,2 +1,1 @@
-Rule syntax error in rule 'B=>'
-at symbol position 1: '=>'
+Error : Extra operator does not match in B =>, rule is incomplete.

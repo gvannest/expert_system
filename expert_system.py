@@ -123,7 +123,7 @@ def ft_interactive(inputs, v):
 	return None
 
 
-def standard_algo(filename):
+def standard_algo(filename, v):
 	try:
 		with open(filename, 'r') as file:
 			lines = file.readlines()
@@ -140,19 +140,19 @@ def standard_algo(filename):
 	inputs.check_trees()
 	inputs.solve_queries()
 
-	print_output(inputs)
+	print_output(inputs, v)
 
 	return inputs
 
 
 def main(args):
 
-	inputs = standard_algo(args.filename)
+	inputs = standard_algo(args.filename, args.verbose)
 
 	if args.undetermined:
-		ft_clear_undetermined(inputs)
+		ft_clear_undetermined(inputs, args.verbose)
 	if args.interactive:
-		ft_interactive(inputs, args)
+		ft_interactive(inputs, args.verbose)
 
 	return None
 

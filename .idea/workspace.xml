@@ -2,78 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="daeef03e-640f-4132-85ad-30648c95880c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/input/not/not_9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/input/or/or_6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/output/out_and_conclusion_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/output/out_and_conclusion_5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/output/out_and_conclusion_6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/output/out_not_9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/output/out_or_6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/expert_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/expert_system.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/input/imply/imply_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/imply/imply_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/input/imply/imply_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/imply/imply_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/input/not/not_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/not/not_0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/input/not/not_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/not/not_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/input/not/not_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/not/not_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/input/and/and_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/and/and_6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/input/imply/imply_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/imply/imply_2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/input/not/not_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/not/not_7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/input/or/or_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/or/or_0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/input/or/or_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/or/or_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/input/or/or_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/or/or_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/input/or/or_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/or/or_3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/input/priority/priority_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/priority/priority_1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/input/priority/priority_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/priority/priority_2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/input/priority/priority_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/priority/priority_3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/input/priority/priority_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/priority/priority_4.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/input/xor/xor_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/xor/xor_3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/input/xor/xor_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/xor/xor_4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/input/xor/xor_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input/xor/xor_5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_and_conclusion_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_and_conclusion_0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_and_conclusion_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_and_conclusion_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_and_conclusion_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_and_conclusion_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_and_conclusion_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_and_conclusion_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_conclusion_same_fact_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_conclusion_same_fact_0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_conclusion_same_fact_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_conclusion_same_fact_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_conclusion_same_fact_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_conclusion_same_fact_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_conclusion_same_fact_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_conclusion_same_fact_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_conclusion_same_fact_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_conclusion_same_fact_4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_conclusion_same_fact_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_conclusion_same_fact_5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_imply_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_imply_0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_imply_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_imply_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_not_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_not_0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_not_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_not_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_not_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_not_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_not_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_not_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_not_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_not_4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_not_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_not_5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_not_6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_not_6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_not_7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_not_7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_not_8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_not_8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_or_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_or_0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_or_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_or_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_or_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_or_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_or_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_or_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_or_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_or_4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_or_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_or_5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_priority_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_priority_0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_priority_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_priority_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_priority_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_priority_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_priority_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_priority_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_priority_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_priority_4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_xor_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_xor_0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_xor_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_xor_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_xor_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_xor_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_xor_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_xor_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_xor_4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_xor_4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/output/out_xor_5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_xor_5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tokens.py" beforeDir="false" afterPath="$PROJECT_DIR$/tokens.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/output/out_imply_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_imply_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/output/out_imply_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/output/out_imply_2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xs_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/xs_tests.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,14 +23,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.50904703">
+    <splitter split-orientation="horizontal" split-proportion="0.50096834">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/parsing.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1275">
-                  <caret line="90" selection-start-line="90" selection-end-line="90" />
+                <state relative-caret-position="96">
+                  <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
                   <folding>
                     <element signature="e#0#10#0" expanded="true" />
                   </folding>
@@ -99,10 +39,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tokens.py">
+            <entry file="file://$PROJECT_DIR$/expert_system.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="345">
-                  <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+                <state relative-caret-position="144">
+                  <caret line="134" column="32" lean-forward="true" selection-start-line="134" selection-start-column="32" selection-end-line="134" selection-end-column="32" />
                   <folding>
                     <element signature="e#0#10#0" expanded="true" />
                   </folding>
@@ -111,27 +51,15 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/problem.txt">
+            <entry file="file://$PROJECT_DIR$/tests/output/out_imply_3.txt">
               <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/settings.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/expert_system.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="192">
-                  <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
-                  <folding>
-                    <element signature="e#0#10#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="105">
+                  <caret line="7" selection-start-line="7" selection-end-line="7" />
                 </state>
               </provider>
             </entry>
@@ -139,12 +67,51 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/xs_tests.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="428">
+                  <caret line="138" column="28" selection-start-line="138" selection-start-column="28" selection-end-line="138" selection-end-column="28" />
+                  <folding>
+                    <element signature="e#0#9#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/input/imply/imply_0.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="6" selection-start-line="6" selection-end-line="6" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/input/imply/imply_1.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="6" selection-start-column="6" selection-end-column="6" />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/problem.txt">
+            <entry file="file://$PROJECT_DIR$/tests/input/imply/imply_2.txt">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="60">
-                  <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+                  <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/input/imply/imply_3.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
                 </state>
               </provider>
             </entry>
@@ -175,10 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tests/output/out_or_5.txt" />
-        <option value="$PROJECT_DIR$/tests/input/or/or_6.txt" />
-        <option value="$PROJECT_DIR$/tests/output/out_or_6.txt" />
-        <option value="$PROJECT_DIR$/tests/input/or/or_3.txt" />
         <option value="$PROJECT_DIR$/tests/output/out_xor_0.txt" />
         <option value="$PROJECT_DIR$/tests/output/out_xor_1.txt" />
         <option value="$PROJECT_DIR$/tests/output/out_xor_2.txt" />
@@ -186,8 +149,6 @@
         <option value="$PROJECT_DIR$/tests/output/out_xor_4.txt" />
         <option value="$PROJECT_DIR$/tests/input/xor/xor_5.txt" />
         <option value="$PROJECT_DIR$/tests/output/out_xor_5.txt" />
-        <option value="$PROJECT_DIR$/tests/input/xor/xor_3.txt" />
-        <option value="$PROJECT_DIR$/tests/input/xor/xor_4.txt" />
         <option value="$PROJECT_DIR$/tests/output/out_not_0.txt" />
         <option value="$PROJECT_DIR$/tests/output/out_not_1.txt" />
         <option value="$PROJECT_DIR$/tests/output/out_not_2.txt" />
@@ -199,7 +160,6 @@
         <option value="$PROJECT_DIR$/tests/input/not/not_6.txt" />
         <option value="$PROJECT_DIR$/tests/output/out_not_7.txt" />
         <option value="$PROJECT_DIR$/tests/output/out_not_8.txt" />
-        <option value="$PROJECT_DIR$/tests/input/not/not_7.txt" />
         <option value="$PROJECT_DIR$/tests/input/not/not_0.txt" />
         <option value="$PROJECT_DIR$/tests/input/not/not_9.txt" />
         <option value="$PROJECT_DIR$/tests/output/out_not_9.txt" />
@@ -214,18 +174,25 @@
         <option value="$PROJECT_DIR$/tests/output/out_priority_0.txt" />
         <option value="$PROJECT_DIR$/tests/output/out_priority_1.txt" />
         <option value="$PROJECT_DIR$/tests/output/out_priority_4.txt" />
-        <option value="$PROJECT_DIR$/tests/input/priority/priority_1.txt" />
-        <option value="$PROJECT_DIR$/tests/input/priority/priority_3.txt" />
-        <option value="$PROJECT_DIR$/tests/input/priority/priority_4.txt" />
-        <option value="$PROJECT_DIR$/tests/input/priority/priority_2.txt" />
         <option value="$PROJECT_DIR$/tests/output/out_priority_2.txt" />
         <option value="$PROJECT_DIR$/tests/output/out_priority_3.txt" />
         <option value="$PROJECT_DIR$/tests/output/out_imply_3.txt" />
         <option value="$PROJECT_DIR$/tests/input/imply/imply_3.txt" />
         <option value="$PROJECT_DIR$/tests/output/out_imply_0.txt" />
         <option value="$PROJECT_DIR$/tests/input/imply/imply_1.txt" />
-        <option value="$PROJECT_DIR$/xs_tests.py" />
+        <option value="$PROJECT_DIR$/tests/input/and/and_6.txt" />
+        <option value="$PROJECT_DIR$/tests/input/not/not_7.txt" />
+        <option value="$PROJECT_DIR$/tests/input/xor/xor_4.txt" />
+        <option value="$PROJECT_DIR$/tests/input/xor/xor_3.txt" />
+        <option value="$PROJECT_DIR$/tests/input/priority/priority_4.txt" />
+        <option value="$PROJECT_DIR$/tests/input/priority/priority_3.txt" />
+        <option value="$PROJECT_DIR$/tests/input/priority/priority_2.txt" />
+        <option value="$PROJECT_DIR$/tests/input/priority/priority_1.txt" />
         <option value="$PROJECT_DIR$/expert_system.py" />
+        <option value="$PROJECT_DIR$/xs_tests.py" />
+        <option value="$PROJECT_DIR$/tests/output/out_imply_1.txt" />
+        <option value="$PROJECT_DIR$/tests/input/imply/imply_2.txt" />
+        <option value="$PROJECT_DIR$/tests/output/out_imply_2.txt" />
       </list>
     </option>
   </component>
@@ -262,7 +229,13 @@
               <item name="expert_system" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
               <item name="input" type="462c0819:PsiDirectoryNode" />
-              <item name="conclusion_same_fact" type="462c0819:PsiDirectoryNode" />
+              <item name="imply" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="expert_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="expert_system" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="output" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -357,12 +330,36 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132707000" />
+    <option name="totallyTimeSpent" value="133950000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="-330" width="1920" height="1057" extended-state="6" />
-    <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17518637" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.23108809" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="R Graphics" order="4" />
+      <window_info anchor="right" id="R Packages" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+    </layout>
+    <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17518637" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -386,159 +383,32 @@
       <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="right" id="R Packages" order="5" />
       <window_info anchor="right" id="Database" order="6" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.119142175" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.16423358" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="R Graphics" order="4" />
-      <window_info anchor="right" id="R Packages" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/output/out_not_4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_not_8.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_not_0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_not_1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_not_3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_not_2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/not/not_1.txt">
+    <entry file="file://$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_2.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/not/not_2.txt">
+    <entry file="file://$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_0.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/not/not_3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/not/not_4.txt">
+    <entry file="file://$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_3.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/not/not_5.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/not/not_6.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/not/not_7.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/not/not_8.txt">
+    <entry file="file://$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_4.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/not/not_9.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_not_9.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/not/not_0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_0.txt">
+    <entry file="file://$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_5.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_conclusion_same_fact_0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/tests/input/and_conclusion/and_conclusion_6.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_1.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_conclusion_same_fact_1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_2.txt">
       <provider selected="true" editor-type-id="text-editor" />
@@ -550,22 +420,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_conclusion_same_fact_3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_4.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_conclusion_same_fact_4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_5.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -574,99 +430,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_conclusion_same_fact_5.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/tests/input/conclusion_same_fact/conclusion_same_fact_0.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_conclusion_same_fact_2.txt">
+    <entry file="file://$PROJECT_DIR$/tests/input/not/not_9.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/not/not_8.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/not/not_7.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_priority_0.txt">
+    <entry file="file://$PROJECT_DIR$/tests/input/not/not_0.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/not/not_1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/not/not_2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/not/not_3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/not/not_4.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/not/not_5.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/not/not_6.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_priority_1.txt">
+    <entry file="file://$PROJECT_DIR$/tests/input/xor/xor_5.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/xor/xor_4.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_priority_4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/priority/priority_4.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/priority/priority_3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/priority/priority_2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/xor/xor_3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/xor/xor_2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/xor/xor_1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/xor/xor_0.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input/priority/priority_1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/priority/priority_0.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/priority/priority_1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-start-column="22" selection-end-column="22" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/tests/input/or/or_0.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/priority/priority_2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/tests/input/or/or_1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_priority_2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/tests/input/or/or_2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/priority/priority_3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/tests/input/or/or_3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_priority_3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/tests/input/or/or_4.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/imply/imply_0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/tests/input/or/or_5.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_imply_3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/tests/input/or/or_6.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/input/imply/imply_3.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -675,23 +556,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/imply/imply_2.txt">
+    <entry file="file://$PROJECT_DIR$/tests/output/out_imply_3.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_imply_2.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/input/imply/imply_1.txt">
+    <entry file="file://$PROJECT_DIR$/expert_system.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="5" selection-end-column="3" />
+        <state relative-caret-position="144">
+          <caret line="134" column="32" lean-forward="true" selection-start-line="134" selection-start-column="32" selection-end-line="134" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/output/out_imply_0.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xs_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="87" column="31" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
+        <state relative-caret-position="428">
+          <caret line="138" column="28" selection-start-line="138" selection-start-column="28" selection-end-line="138" selection-end-column="28" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -700,35 +588,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/output/out_imply_1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state>
+          <caret column="66" selection-start-column="66" selection-end-column="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/output/out_imply_0.txt">
+    <entry file="file://$PROJECT_DIR$/tests/input/imply/imply_1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="45" selection-start-column="45" selection-end-column="45" />
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/problem.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tokens.py">
+    <entry file="file://$PROJECT_DIR$/tests/input/imply/imply_0.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/expert_system.py">
+    <entry file="file://$PROJECT_DIR$/tests/input/imply/imply_2.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+        <state relative-caret-position="60">
+          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/output/out_imply_2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="42" selection-start-column="42" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parsing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
