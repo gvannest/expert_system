@@ -204,3 +204,6 @@ class Inputs:
         for q in self.queries_list:
             visited_tree = []
             self.elements[q].solver(visited_tree)
+        for f in self.facts_list:
+            visited_tree = []
+            self.elements[f].solver(visited_tree)

@@ -1,2 +1,2 @@
-A is false.
-B is true.
+A is false
+B is true

@@ -1,5 +1,5 @@
-A is false.
-B is true.
-C is false.
-D is true.
-E is true.
+A is false
+B is true
+C is false
+D is true
+E is true
