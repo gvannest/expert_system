@@ -7,7 +7,7 @@ from settings import *
 
 def ft_argparser():
 	parser = argparse.ArgumentParser()
-	parser.add_argument("filename", type=argparse.FileType('r'), help="Text file with the rule set, facts and queries to be solved")
+	parser.add_argument("filename", type=str, help="Text file with the rule set, facts and queries to be solved")
 	parser.add_argument("-i", "--interactive", action="store_true", help="Interactive facts mode, where the user can change facts or add new facts")
 	parser.add_argument("-u", "--undetermined", action="store_true", help="Undetermined mode, where the user can clarify undetermined facts")
 	args = parser.parse_args()
@@ -44,9 +44,18 @@ def verbose(elem):
 	message = ''
 	if elem.proved_by == []:
 		if elem.status:
-			message = f"{elem.value} is a fact.\n"
+			message = f"{elem.value} is a fact."
 		else:
-			message = f"{elem.value} is undetermined.\n"
+			for tree in elem.rules:
+				message += tree.str_value
+				for token in tree.value:
+					if isinstance(token, Element) and token != elem:
+						if token.status == 1:
+							message += f" and {token.value} is TRUE"
+						elif token.undetermined == 1:
+							message += f" and {token.value} is UNDETERMINED"
+						else:
+							message += f" and {token.value} is FALSE"
 	else:
 		for tree in elem.proved_by:
 			message += tree.str_value
@@ -56,7 +65,6 @@ def verbose(elem):
 						message += f" and {token.value} is TRUE"
 					else:
 						message += f" and {token.value} is FALSE"
-			message += '\n'
 	return message
 
 
