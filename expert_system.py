@@ -73,6 +73,8 @@ def verbose(elem):
 				if isinstance(token, Element) and token != elem:
 					if token.status == 1:
 						message += f"\n\t\t{token.value} is TRUE"
+					elif token.undetermined == 1:
+						message += f"\n\t\t{token.value} is UNDETERMINED"
 					else:
 						message += f"\n\t\t{token.value} is FALSE"
 	return message
@@ -112,7 +114,7 @@ def ft_interactive(inputs, v):
 			for rule in inputs.rules_list:
 				print(rule)
 			print(f"Initial facts : {inputs.initial_facts}")
-			new_facts = input("Please provide a new set of facts : ")
+			new_facts = input("Please provide a new set of facts (ex: XYZ) : ")
 			new_facts = new_facts.replace(' ', '')
 			if new_facts == '':
 				new_facts = '='
