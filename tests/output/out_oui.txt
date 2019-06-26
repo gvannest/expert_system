@@ -1,0 +1,2 @@
+D is true
+G is true

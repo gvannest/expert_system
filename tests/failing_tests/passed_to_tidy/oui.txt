@@ -2,8 +2,8 @@
 #
 
 A | B  + A => C + !(!B + H + !( !(A | G) + D))
-(A + !F + !(C | E)) + G => D #comment
+(A + !F + (C | E)) + G => D #comment
 
-=BCA
+=BCAG
 
-?DW # D is false as B is already true and confirms clause
+?DG # D is false as B is already true and confirms clause
