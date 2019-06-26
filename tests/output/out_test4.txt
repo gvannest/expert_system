@@ -1,0 +1,6 @@
+A is true
+B is false
+E is false
+F is true
+G is false
+C is false

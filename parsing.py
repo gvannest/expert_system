@@ -181,16 +181,14 @@ class Inputs:
     def check_trees(self):
         for tree in self.trees:
             for token in tree.value:
-                if isinstance(token, Element):
-                    tree.elements_nb += 1
                 if isinstance(token, Operator) and (token.value == ">" or token.value == "<"):
                     tree.imply_nb += 1
                     if tree.imply_nb > 1:
                         self.parsing_error(
                             f"Error : Too many imply tokens in {tree.str_value}.")
-                        sys.exit(0)
-                if isinstance(token, Operator) and token.value != ">" and token.value != "<":
-                    tree.operator_nb += 1
+            if tree.imply_nb < 1:
+                self.parsing_error(
+                    f"Error : No imply token in {tree.str_value}.")
 
     def set_initial_facts(self):
         for f in self.facts_list:

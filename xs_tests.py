@@ -200,3 +200,22 @@ class TestExpertSystem:
 			with capsys.disabled():
 				print(f"{file} getting out")
 			assert  results.out == out_target
+
+
+	def test_failing(self, capsys):
+		path = "tests/failing_tests"
+		list_files = os.listdir(path)
+		for file in list_files:
+			with open(f"tests/output/out_{file}", 'r') as fd:
+				out_target = fd.read()
+			with capsys.disabled():
+				print(f"{file} getting in")
+			if file in ['ideas.txt', 'test3.txt']:
+				with pytest.raises(SystemExit) as e:
+					standard_algo(f"{path}/{file}", False)
+			else:
+				standard_algo(f"{path}/{file}", False)
+			results = capsys.readouterr()
+			with capsys.disabled():
+				print(f"{file} getting out")
+			assert  results.out == out_target

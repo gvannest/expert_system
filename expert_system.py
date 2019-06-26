@@ -96,8 +96,7 @@ def print_output(inputs, v):
 				print(f"{c} is true")
 			elif not c_elem.status:
 				print(f"{c} is false")
-		# if c != last:
-		# 	print('')
+
 
 def ft_interactive(inputs, v):
 	""" Function which is called only if the Interactive Facts mode is set on.

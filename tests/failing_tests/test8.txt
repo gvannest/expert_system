@@ -7,6 +7,6 @@ E ^ D => F
 
 =A
 
-?ATPF # T and P are True, F is False
+?ABCDETPF # T and P are True, F is False
 
 # Il faut utiliser la resolution + updater les facts

@@ -1,0 +1,8 @@
+A is true
+B is false
+C is true
+D is false
+E is false
+T is true
+P is true
+F is false
