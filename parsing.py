@@ -191,7 +191,10 @@ class Inputs:
                     f"Error : No imply token in {tree.str_value}.")
 
     def set_initial_facts(self):
+        self.initial_facts = []
         for f in self.facts_list:
+            if f not in self.elements.keys():
+                self.elements[f] = Element(f)
             self.elements[f].status = TRUE
             self.initial_facts.append(f)
 
