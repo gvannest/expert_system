@@ -49,7 +49,6 @@ You need to have python 3 installed on your machine.
 
 **Positional arguments (= required):**
 
-| | | |
 |-|-|-|
 |filename| Path to the text file with the rule set, facts and queries to be solved|
   
