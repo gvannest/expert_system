@@ -11,8 +11,7 @@ Finally, the input file also contains a set of queries (line starting with the `
 
 The subject include some constraints such as using a backward chaining inference method.
 
-### Input
-***
+## Input
 
 The input is a .txt file containing the rules, initial facts and queries.
 It has to be passed to the program as an argument (see the *Usage* section below).
@@ -36,7 +35,7 @@ A + B => C
 #A + B => !C
 
 =ABG
-#Add also one here if it pleased you!
+#Add also one here if it pleases you!
 
 ?GVXC
 ```
