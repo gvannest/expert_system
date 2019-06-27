@@ -62,3 +62,19 @@ Short flag       | Long flag              | Description
   -i             | --interactive          |    Interactive facts mode, where the user can change facts or add new facts
   -u             | --undetermined         |    Undetermined mode, where the user can clarify undetermined facts
   -v             | --verbose              |    Verbose mode. Outputs the rules leading to a particular conclusion
+
+
+## Results
+
+Program will output the status (i.e. `true`, `false` or `undetermined`) of each element in the query list.
+For example, if the query is `?ABC`, we may have an output of this kind:
+
+```
+A is true
+B is true
+C is false
+```
+
+## Unit tests
+
+Running `pytest xs_tests.py` will launch a set of unit tests. You can fin the different tests inputs and outputs in the `tests` folder.
