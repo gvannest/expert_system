@@ -14,6 +14,6 @@ Finally, the input file also contains a set of queries (line starting with the `
 The input is a .txt file containing the rules, initial facts and queries.
 It has to be passed to the program as an argument (see the *Usage* section below).
 
-Exemple of an input file :
+Example of an input file :
 
-<img src="tests/test.png" alt="input file exemple" width="200"/>
+![ScreenShot](tests/test.png)
