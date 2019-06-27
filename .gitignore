@@ -1,6 +1,7 @@
 #Nico & Gautier files
 simple.txt
 tests.py
+.idea
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
