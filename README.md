@@ -16,4 +16,4 @@ It has to be passed to the program as an argument (see the *Usage* section below
 
 Exemple of an input file :
 
-<img src="tests/test.png" alt="starting 8-puzzle" width="200"/>
+<img src="tests/test.png" alt="input file exemple" width="200"/>
