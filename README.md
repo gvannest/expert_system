@@ -43,14 +43,16 @@ A + B => C
 
 ## Usage
 
+You need to have python 3 installed on your machine.
+
 ``` python3 expert_system.py [-i] [-u] [-v] filename```
 
-Position argument (= required):
+**Positional arguments (= required):**
 
 filename      Path to the text file with the rule set, facts and queries to be solved
   
 
-Optional arguments :
+**Optional arguments :**
 
 Short flag       | Long flag              | Description
 :----------------|:-----------------------| :---------------------------|
