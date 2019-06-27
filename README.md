@@ -9,6 +9,8 @@ The aim of this project is to build an expert system. It consists of a set of lo
 as well as initial facts (line starting with the `=` sign) which are considered to be true.
 Finally, the input file also contains a set of queries (line starting with the `?` sign) which are the element to be proved using the set of rules and initial facts.
 
+The subject include some constraints such as using a backward chaining inference method.
+
 ### Input
 ***
 
@@ -17,8 +19,43 @@ It has to be passed to the program as an argument (see the *Usage* section below
 
 Example of an input file :
 
-![ScreenShot](tests/test.png)
+```
+#You can also add comment
+
+    #Wherever you want in the file
+
+C => E
+A + B + C => D
+A | B => C
+A + !B => F
+V ^ W => X              #And it would still work as expected
+C | !G => H
+C | G => X + V
+E + F => !V
+A + B => C
+#A + B => !C
+
+=ABG
+#Add also one here if it pleased you!
+
+?GVXC
+```
 
 
 ## Usage
 
+``` python3 expert_system.py [-i] [-u] [-v] filename```
+
+Position argument (= required):
+
+filename      Path to the text file with the rule set, facts and queries to be solved
+  
+
+Optional arguments :
+
+Short flag       | Long flag              | Description
+:----------------|:-----------------------| :---------------------------|
+  -h             | --help                 |    Show help message
+  -i             | --interactive          |    Interactive facts mode, where the user can change facts or add new facts
+  -u             | --undetermined         |    Undetermined mode, where the user can clarify undetermined facts
+  -v             | --verbose              |    Verbose mode. Outputs the rules leading to a particular conclusion
