@@ -77,5 +77,5 @@ C is false
 
 ## Unit tests
 
-Running `pytest xs_tests.py` will launch a set of unit tests. You can fin the different tests inputs and outputs in the `tests` folder.
+Running `pytest xs_tests.py` will launch a set of unit tests. You can find the different tests inputs and outputs in the `tests` folder.
 These tests are also used for CI.
